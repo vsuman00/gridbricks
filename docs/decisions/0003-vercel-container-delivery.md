@@ -1,6 +1,6 @@
 # ADR-003: Single-container Vercel assignment delivery
 
-Status: Accepted for the assignment package on 27 October 2026. Local image behavior is verified; Vercel production behavior is not yet verified.
+Status: Accepted for the assignment package on 27 October 2026. Local image and read-only Vercel production behavior are verified in the tested scope.
 
 ## Context
 
@@ -16,4 +16,4 @@ The public repository and live-data UI include the required attribution and link
 
 ## Consequences and limits
 
-The single-port image avoids a frontend/backend cross-origin split and satisfies the assignment's Docker requirement. It also keeps API, UI, CSV and source lineage tied to the same packaged snapshot. Docker image and browser checks passed locally; no Vercel project or hosted URL has been validated yet. This choice does not provide persistent refreshes, authentication, rate limiting or a multi-user service guarantee. The analytical comparison policy from ADR-002 is unchanged.
+The single-port image avoids a frontend/backend cross-origin split and satisfies the assignment's Docker requirement. It also keeps API, UI, CSV and source lineage tied to the same packaged snapshot. Docker image and browser checks passed locally and at the [production URL](https://gridbricks-blush.vercel.app/). The Vercel project uses the Container framework preset and GitHub `main`; the Other preset yielded a 404 before that setting was corrected. This choice does not provide persistent refreshes, authentication, rate limiting or a multi-user service guarantee. The analytical comparison policy from ADR-002 is unchanged.

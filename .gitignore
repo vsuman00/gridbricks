@@ -33,3 +33,4 @@ htmlcov/
 playwright-report/
 test-results/
 .test-data/
+.vercel/

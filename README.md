@@ -131,7 +131,7 @@ The API and import CLI write JSON-line diagnostic events to stderr. API response
 
 ## Assignment delivery and Vercel
 
-The analytical application and Docker image are verified locally. The source is in the [public GridBricks repository](https://github.com/vsuman00/gridbricks). The assignment submission is **PARTIAL**: there is no Vercel deployment, recorded YouTube video or submitted form. The [assignment audit](docs/ASSIGNMENT_AUDIT.md) lists each requirement, evidence and remaining action. There is no deployment URL to link yet; add the verified production URL here after deployment.
+The application is live at **[gridbricks-blush.vercel.app](https://gridbricks-blush.vercel.app/)**. The source is in the [public GridBricks repository](https://github.com/vsuman00/gridbricks). The React frontend, FastAPI backend and packaged read-only January SQLite snapshot were verified on the production site. The assignment submission is **PARTIAL** until the video is recorded and the form is submitted. The [assignment audit](docs/ASSIGNMENT_AUDIT.md) records the hosted checks and remaining actions.
 
 The Vercel build uses one containerized web app. [`Dockerfile.vercel`](Dockerfile.vercel) builds the Vite frontend and locked Python backend, then serves the built frontend and `/api/v1` from one HTTP process listening on Vercel's `$PORT`. Docker builds and tests this image locally; Vercel builds the same Dockerfile for deployment. Docker Compose is not a Vercel deployment step. [Vercel's container guide](https://vercel.com/kb/guide/does-vercel-support-docker-deployments) describes the image entry point and Function behavior.
 
@@ -144,7 +144,7 @@ docker run --rm -p 127.0.0.1:4286:8000 -e PORT=8000 gridbricks-vercel:assignment
 
 Open `http://127.0.0.1:4286`. The image serves the reviewed live January snapshot from `deployment/data/`; its build checks the SQLite database, manifest and all 69 saved raw-input hashes. The API opens SQLite read-only. Browser requests never import. A source refresh needs a new reviewed deployment artifact, because Vercel container instances do not provide durable local writes.
 
-The production Host is accepted from Vercel's `VERCEL_URL` and `VERCEL_PROJECT_PRODUCTION_URL` environment values. For a custom domain, set `GRIDBRICKS_ALLOWED_HOSTS` to a comma-separated list of bare DNS names. The local two-server development commands above still use loopback. Import the public repository root into Vercel, deploy to production, and verify Decision, Accuracy, CSV and the production URL in a signed-out browser. Update this section with that URL only after it works. The [audit](docs/ASSIGNMENT_AUDIT.md#vercel-and-docker-delivery-path) tracks the remaining release checks.
+The Vercel project uses the **Container** framework preset, the repository root and the `main` branch of `vsuman00/gridbricks`. Its production Host is accepted from Vercel's `VERCEL_URL` and `VERCEL_PROJECT_PRODUCTION_URL` environment values. For a custom domain, set `GRIDBRICKS_ALLOWED_HOSTS` to a comma-separated list of bare DNS names. The local two-server development commands above still use loopback. After a new deployment, verify Decision, Accuracy, CSV and public access before using its URL. The [audit](docs/ASSIGNMENT_AUDIT.md#vercel-and-docker-delivery-path) records the current hosted checks.
 
 ## AI-assisted development disclosure
 

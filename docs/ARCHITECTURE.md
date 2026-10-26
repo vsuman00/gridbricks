@@ -1,6 +1,6 @@
 # Architecture: wind forecast decision support
 
-Version: 0.1. Date: 26 October 2026. Status: local analytical architecture and Docker delivery package verified; Vercel production remains unverified. Live and synthetic snapshots, analytical APIs, export, and integrated React views are present. [Release validation](RELEASE_VALIDATION.md) records tested behavior and limits.
+Version: 0.1. Date: 27 October 2026. Status: local analytical architecture, Docker package and read-only Vercel production deployment verified in their tested scopes. Live and synthetic snapshots, analytical APIs, export, and integrated React views are present. [Release validation](RELEASE_VALIDATION.md) records local tests; [assignment audit](ASSIGNMENT_AUDIT.md) records hosted checks and limits.
 
 Requirements: [PRD](PRD.md). Sources: [research](SOURCE_RESEARCH.md). Rationale: [ADR-001](decisions/0001-mvp-baseline.md). Task order: [implementation plan](IMPLEMENTATION_PLAN.md).
 

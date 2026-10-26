@@ -1,6 +1,6 @@
 # Project todo
 
-Last updated: 27 October 2026. Current phase: T01-T12 local analytical baseline and Docker package VERIFIED; public source repository IMPLEMENTED; assignment submission PARTIAL. The attached challenge still requires a public Vercel app, a two-part video and form submission. The [assignment audit](docs/ASSIGNMENT_AUDIT.md) separates these from local verification.
+Last updated: 27 October 2026. Current phase: T01-T12 local analytical baseline and Docker package VERIFIED; public repository and Vercel app IMPLEMENTED; assignment submission PARTIAL. The attached challenge still requires a two-part video and form submission. The [assignment audit](docs/ASSIGNMENT_AUDIT.md) separates hosted verification from local checks.
 
 This is the progress tracker for [IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md). Task IDs, scope, dependencies, acceptance criteria, and verification commands come from that plan. Keep IDs stable and link evidence when updating status.
 
@@ -45,7 +45,7 @@ The Done cell is checked only for tasks whose acceptance evidence has passed. So
 
 1. Reviewer: run the saved live snapshot or the separate synthetic fixture with the [README](README.md) commands and use the [client](docs/presentations/CLIENT_WALKTHROUGH.md) or [technical](docs/presentations/TECHNICAL_WALKTHROUGH.md) outline.
 2. If Elexon clarifies WINDFOR's physical interval or the client supplies an actual buying cutoff, version the policy and regenerate the affected snapshot/tests before changing displayed claims.
-3. Complete Vercel production deployment and signed-out URL checks, then record the unlisted video and submit the form as tracked in the [assignment audit](docs/ASSIGNMENT_AUDIT.md). Optional FR05 UI viewer and FR10 extra statistics remain DEFERRED.
+3. Record the unlisted video against the [live app](https://gridbricks-blush.vercel.app/), verify its link, and submit the form as tracked in the [assignment audit](docs/ASSIGNMENT_AUDIT.md). Optional FR05 UI viewer and FR10 extra statistics remain DEFERRED.
 
 The user corrected the earlier UI-only interpretation: delivery requires the real backend and full application. The application adopts the documented timestamp-reference benchmark while retaining the physical source ambiguity.
 
@@ -146,3 +146,9 @@ For each completed or interrupted task, record: date, status, changed files, ver
 - Docker package VERIFIED locally: `Dockerfile.vercel` builds the locked React and Python app, serves the UI and API from one port, and includes a reviewed read-only live snapshot. The build checked SQLite integrity, snapshot and manifest identity, and all 69 raw response hashes. The container ran as UID 10001; UI, static asset, health, status, Decision, 744-row Accuracy and 24-row Decision CSV returned 200. A simulated Vercel Host returned 200. A real Chromium run loaded both views without page errors.
 - Regression checks VERIFIED: `make check` passed 157 backend and 79 frontend tests, lint, types and build. The isolated browser suite passed 20 cases after packaging. These are local checks; Vercel deployment is still PARTIAL.
 - Public repository IMPLEMENTED: reviewed source and the immutable deployment inputs were pushed to [vsuman00/gridbricks](https://github.com/vsuman00/gridbricks). The repository was renamed to match the project at the user's request. Generated local data, dependencies, caches and test output remain ignored. The brief's anonymous-name criterion is PARTIAL because the requested name is descriptive. Next: import this repository into Vercel, verify the production URL signed out, then record and submit the video and form.
+
+### 27 October 2026: Vercel production deployment
+
+- Vercel production VERIFIED in the tested scope: the Container framework preset built `Dockerfile.vercel`, checked the packaged snapshot and all 69 raw hashes, and served the [public app](https://gridbricks-blush.vercel.app/). The project is connected to GitHub `vsuman00/gridbricks` on `main`. A first deployment under the Other preset returned 404; the Container preset fixed routing.
+- Unauthenticated hosted probes returned 200 for UI, health, status, Decision, full-month Accuracy and pinned CSV. Accuracy returned 744/744 matches, and CSV returned 744 rows for the same snapshot. Browser Decision and Accuracy loaded; applying 15 January at 09:00 showed the expected 7,398 MW first target. A 390-pixel viewport had no document overflow. Local data, test output and caches are excluded from Vercel uploads by `.vercelignore`.
+- Remaining delivery: record the unlisted video, test its link and submit the form. The packaged SQLite data is read-only; refreshing it needs a reviewed rebuild or a separate durable store.
