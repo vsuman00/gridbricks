@@ -131,7 +131,7 @@ The API and import CLI write JSON-line diagnostic events to stderr. API response
 
 ## Assignment delivery and Vercel
 
-The analytical application and Docker image are verified locally. The source is in the anonymous-named [public GitHub repository](https://github.com/vsuman00/r8m4q2v6). The assignment submission is **PARTIAL**: there is no Vercel deployment, recorded YouTube video or submitted form. The [assignment audit](docs/ASSIGNMENT_AUDIT.md) lists each requirement, evidence and remaining action. There is no deployment URL to link yet; add the verified production URL here after deployment.
+The analytical application and Docker image are verified locally. The source is in the [public GridBricks repository](https://github.com/vsuman00/gridbricks). The assignment submission is **PARTIAL**: there is no Vercel deployment, recorded YouTube video or submitted form. The [assignment audit](docs/ASSIGNMENT_AUDIT.md) lists each requirement, evidence and remaining action. There is no deployment URL to link yet; add the verified production URL here after deployment.
 
 The Vercel build uses one containerized web app. [`Dockerfile.vercel`](Dockerfile.vercel) builds the Vite frontend and locked Python backend, then serves the built frontend and `/api/v1` from one HTTP process listening on Vercel's `$PORT`. Docker builds and tests this image locally; Vercel builds the same Dockerfile for deployment. Docker Compose is not a Vercel deployment step. [Vercel's container guide](https://vercel.com/kb/guide/does-vercel-support-docker-deployments) describes the image entry point and Function behavior.
 
