@@ -1,0 +1,20 @@
+{
+  "purpose": "Single local development UI navigation; not the NFR02 analytical API benchmark.",
+  "browser": "chromium",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "recordedAt": "2026-10-26T16:36:50.484Z",
+  "timing": {
+    "domContentLoadedMs": 107.09999999403954,
+    "loadMs": 107.5,
+    "paintEntries": [
+      {
+        "name": "first-paint",
+        "startTime": 112
+      }
+    ],
+    "resources": 27
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "source_mode": "synthetic",
+  "description": "Deterministic publication-boundary fixture; not Elexon observations.",
+  "cutoff_utc": "2026-01-15T09:30:00Z",
+  "target_start": "2026-01-16T00:00:00Z",
+  "observations": [
+    {"id": "older-day", "generation_mw": 90, "publish_time_utc": "2026-01-14T08:30:00Z", "quality_flags": []},
+    {"id": "eligible", "generation_mw": 100, "publish_time_utc": "2026-01-15T08:30:00Z", "quality_flags": []},
+    {"id": "post-cutoff", "generation_mw": 140, "publish_time_utc": "2026-01-15T10:30:00Z", "quality_flags": []}
+  ]
+}

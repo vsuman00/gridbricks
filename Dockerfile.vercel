@@ -1,0 +1,29 @@
+FROM node:26.5.0-alpine AS frontend-build
+
+WORKDIR /build/frontend
+COPY frontend/package.json frontend/package-lock.json frontend/.npmrc ./
+RUN npm ci
+COPY frontend/ ./
+RUN npm run build
+
+FROM python:3.12.12-slim AS app
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    GRIDBRICKS_DATA_DIR=/app/data \
+    GRIDBRICKS_STATIC_DIR=/app/frontend
+
+WORKDIR /app
+COPY backend/pyproject.toml backend/uv.lock backend/.python-version /app/backend/
+COPY backend/src /app/backend/src
+RUN python -m pip install --no-cache-dir uv==0.11.8 \
+    && uv sync --project /app/backend --locked --no-dev --python 3.12
+
+COPY --from=frontend-build /build/frontend/dist /app/frontend
+COPY deployment/data /app/data
+COPY scripts/verify_deployment_snapshot.py /app/scripts/verify_deployment_snapshot.py
+RUN /app/backend/.venv/bin/python /app/scripts/verify_deployment_snapshot.py /app/data \
+    && chmod -R a-w /app/data
+
+USER 10001:10001
+CMD ["sh", "-c", "exec /app/backend/.venv/bin/python -m uvicorn gridbricks.main:app --host 0.0.0.0 --port ${PORT:-80}"]

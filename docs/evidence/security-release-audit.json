@@ -1,0 +1,201 @@
+{
+  "checked_at_utc": "2026-10-26T15:49:42.853268+00:00",
+  "commands": {
+    "npm_advisories": {
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "audit",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"auditReportVersion\": 2,\n  \"vulnerabilities\": {},\n  \"metadata\": {\n    \"vulnerabilities\": {\n      \"info\": 0,\n      \"low\": 0,\n      \"moderate\": 0,\n      \"high\": 0,\n      \"critical\": 0,\n      \"total\": 0\n    },\n    \"dependencies\": {\n      \"prod\": 4,\n      \"dev\": 278,\n      \"optional\": 41,\n      \"peer\": 0,\n      \"peerOptional\": 0,\n      \"total\": 281\n    }\n  }\n}"
+    },
+    "npm_registry_signatures": {
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "audit",
+        "signatures",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"invalid\": [],\n  \"missing\": []\n}"
+    },
+    "ruff_security_rules": {
+      "command": [
+        "backend/.venv/bin/ruff",
+        "check",
+        "--select",
+        "S",
+        "backend/src"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!"
+    },
+    "source_security_tests": {
+      "command": [
+        "backend/.venv/bin/python",
+        "-m",
+        "pytest",
+        "backend/tests/integration/test_security.py",
+        "backend/tests/integration/test_security_blackbox.py",
+        "backend/tests/integration/test_export.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "..................................................................       [100%]\n66 passed in 0.83s"
+    },
+    "uv_advisories": {
+      "command": [
+        "uv",
+        "audit",
+        "--project",
+        "backend",
+        "--locked",
+        "--python-version",
+        "3.12",
+        "--python-platform",
+        "aarch64-apple-darwin"
+      ],
+      "exit_code": 0,
+      "stderr": "warning: `uv audit` is experimental and may change without warning. Pass `--preview-features audit` to disable this warning.\nResolved 34 packages in 22ms\nFound no known vulnerabilities and no adverse project statuses in 33 packages",
+      "stdout": ""
+    },
+    "uv_lock_consistency": {
+      "command": [
+        "uv",
+        "lock",
+        "--project",
+        "backend",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "Resolved 34 packages in 22ms",
+      "stdout": ""
+    }
+  },
+  "final_recheck": {
+    "browser_root_redirect": "GET 127.0.0.1:8000/ reached 127.0.0.1:5173/ with no failed browser requests",
+    "focused_local_entry_security": "passed: 62 health, source-aware and real-server black-box tests after fixed-root redirect and health alias",
+    "make_audit_security": "passed previously: uv selected graph 33 packages with no known vulnerabilities or adverse statuses; npm 0 vulnerabilities; dependencies unchanged",
+    "make_check": "passed: 151 backend tests, 82 frontend tests, lint, format, typecheck and production build",
+    "ruff_security_rules": "passed: backend/.venv/bin/ruff check --select S backend/src",
+    "source_hashes": "refreshed after the fixed local entry-route change"
+  },
+  "findings": [],
+  "initial_audit_at_utc": "2026-10-26T14:54:31.497449+00:00",
+  "limits": [
+    "Scoped source review, abuse tests and current advisory/signature lookup; not exhaustive penetration testing or certification.",
+    "Advisories can change; no known advisories and valid registry signatures do not establish package safety or detect unknown malicious code.",
+    "uv audit covers the selected Python 3.12 macOS arm64 project/default-development graph, not the isolated build environment or every platform.",
+    "Local CLI operators and storage are trusted. Public hosting, authentication/TLS, OS access, supply-chain source audits, volumetric denial of service and arbitrary provider-payload stress are outside this verification.",
+    "No Git history is present for historical secret scanning. Pattern checks cover only the recorded files and patterns; matching sensitive values are never printed.",
+    "Browser runtime, CSP and accessibility evidence is recorded separately; those checks were not rerun by these dependency/source commands."
+  ],
+  "scope": "Local read-only API, import CLI source boundaries, CSV export, frontend response/URL boundaries and the installed locked dependency graphs.",
+  "source_hashes": {
+    "backend/src/gridbricks/__init__.py": "88877a65e33d26bca8f72399ae4cdb7cc6375e1f8c71512bec1a443c1087d34a",
+    "backend/src/gridbricks/analytics/__init__.py": "ad6f6a3d277c6e88b258e591261b131fb9f81c60a7f1da38eaa9b0e7355e87bc",
+    "backend/src/gridbricks/analytics/alignment.py": "d445e2b4cbbda36b6f2263e423c391e24a9ae644d250f65cc197713f219245ff",
+    "backend/src/gridbricks/analytics/grid.py": "e8bd9cf1984344e40910ca2d1c8c7882b44aaca2d3e9619c9e030719a9e39d0d",
+    "backend/src/gridbricks/analytics/metrics.py": "d4e559f0466a40162109f15b8a23d1d151db3fc90b51e156c91a5bee4e8c5b7b",
+    "backend/src/gridbricks/analytics/policies.py": "884aa36bcd58ee28bb7f8e3fb144d46fa4b182cb136fb6d8cde6329bf6785373",
+    "backend/src/gridbricks/analytics/selection.py": "0eb76435df047131497521f78ec0da77e4f9fce3ecdb2a26649176c838a71ed4",
+    "backend/src/gridbricks/api/__init__.py": "8379ed53a6ea22e7d50a933f2108051600f49ebca39056f35e28b8345893ff11",
+    "backend/src/gridbricks/api/errors.py": "ec3b40b7c6b762ecc161f1982694a56d082e4eccddef90951ee7c0e5cdd20b81",
+    "backend/src/gridbricks/api/export.py": "001ad473ae160c39fd5d10631cae7e9641fb9f98cf7a6b1e3acf3b16368b2f2f",
+    "backend/src/gridbricks/api/routes.py": "06da2f73513756c3f6180e85f568328044497e2c7e317f3003cbec0b6f565a17",
+    "backend/src/gridbricks/api/service.py": "ea5cbbf3a5bce0122e14f92314106bc04c08d3bcb490f70c2acb57f163e0d541",
+    "backend/src/gridbricks/cli.py": "834eed30fed5ad73b12f8fc616f16236d113312a106f09db47232a87bb2c6b08",
+    "backend/src/gridbricks/config.py": "aa52028141537af54e7b9e641798b4a549a4f9b27eff91a5ca5f61ca4d1266d4",
+    "backend/src/gridbricks/ingestion/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/src/gridbricks/ingestion/fixtures.py": "a3101f00b09031324f489f29bfa5cf5188c2204e5602d9418f089ca6e8fe8cde",
+    "backend/src/gridbricks/ingestion/replay.py": "a727be90f7a3bb3f49b86b4b3f415c46ea20752a0bd7072f27715a4ff95fc9df",
+    "backend/src/gridbricks/ingestion/service.py": "8fa5ecba950e31f4b60c50c66a6bdafe6a0035419d531391ead102c4593e6f22",
+    "backend/src/gridbricks/ingestion/validation.py": "b29b1221f55d5a8ef67f78cea92173cfc0aefa89cd451e916747180114262255",
+    "backend/src/gridbricks/main.py": "1f43e4c27d657f9e16e5482cee0a785dfb3ed6b2aee298763e2eb32a72cdb08c",
+    "backend/src/gridbricks/sources/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/src/gridbricks/sources/elexon.py": "825e4995a2c3bd65a08c25456f1539b589b968b5d4e0218970813c1f7c2ccf26",
+    "backend/src/gridbricks/storage/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/src/gridbricks/storage/database.py": "b514fff1df36c9226d284f126ce3265b2961a70d2e1d16b5e20646914fc41bd4",
+    "backend/src/gridbricks/storage/models.py": "ee3c5d0d69662ddf55e383e7b54fd28c5361b576b85964f1d737bd24cf46131e",
+    "backend/src/gridbricks/storage/repository.py": "0d57d66cc65c50c4a82e19dda2eb41a439ba54d6545dfd008b9f6c8cb26b2f7b",
+    "backend/uv.lock": "5c17ead488e2d3e32308b0091edbc45b72a7daee23dc380b5e70aa8c196680c6",
+    "frontend/.npmrc": "761290ca38d627b5dfde3b3a20b9f398165e2ef458afbb4dcef590c05f5cb766",
+    "frontend/package-lock.json": "fb0acea236e80238cd2e295fa1692133ac0588c2007f1230d301b99e1ccf2420",
+    "frontend/src/App.tsx": "e011e0117ddb81ba3018d80dc12f330fe0676da29706982eda8a039fe0a3a472",
+    "frontend/src/DesignPlaceholder.tsx": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frontend/src/api.ts": "99380638d2874b675c79e6c6d8198366f5fbe75f86c8bf679750a1086974a006",
+    "frontend/src/apiValidation.ts": "bd1b623eebb58ad4b8a7389c7864954ff82f5dc3dbdf6a814375d1b02b91f2ff",
+    "frontend/src/components/DataDetails.tsx": "8cb9bbfe55747ba933ab5adb6542472ad844e4848474a24c48a2d2508b65f36d",
+    "frontend/src/components/DataLoading.tsx": "80b703ca3f6473c48067315222a33e833e69a705a1ab719f33d9ed06e2d4a9aa",
+    "frontend/src/components/DataOverview.tsx": "1ff9365cd61dbc929f2b5f2ad1c2e1b7ea65334dac9970357923248409f781f1",
+    "frontend/src/components/DataTables.tsx": "9042efb9baf97300d5fb8515badb4fc88a753c1a6267475fd1dea24e8d0109f1",
+    "frontend/src/components/Filters.tsx": "56f0dabd2b9f0ca91f4811de95e7bdc567ca1df81658e93696143bf214a9ea1f",
+    "frontend/src/components/Icon.tsx": "77a84145eb330948201edcde798425b23e2cc6214f86c72e5ff72b72dc68f3d3",
+    "frontend/src/components/Layout.tsx": "be35c627488acbebb79680a47744c52e8cec654127f1b7320933489588039688",
+    "frontend/src/components/Overview.tsx": "4bd5be595c7d89c956fd0c4b6711dc9ce1fea19e39007a72f4e65e9ec7e5a8e7",
+    "frontend/src/components/Tables.tsx": "7f9fc9f662f3855f418213b5d4ccf3c5547ef3d66b7e8895f61665a97967dc58",
+    "frontend/src/main.tsx": "1fbae184864439782c2f5b0717ff913e89d8bb54ececf07ec6635bd39f40fdb0",
+    "frontend/src/state.ts": "5f6c55a296d4829fbddb8995028f9dc4ea3311ded9d7c63cb15a10ecef7dcc45",
+    "frontend/src/styles.scss": "5d0be79a2311bd907f66de4cebd892e6ea333e39edda97dbd90b0ff62d969cc0",
+    "frontend/src/styles/_tokens.scss": "10dc14e529cbe082c5204bcfac034af535788f84702fe85a63f119825a50ad14",
+    "frontend/src/types.ts": "8c87b629a0a80b1bd93c39d52f0418c4571c32a551ea46a0a04f190fbf91b3d2",
+    "frontend/src/useData.ts": "153dc9c7089fbd211b0a0363d10675521307fef3c6a09943e6702d2ab3ec6d04",
+    "frontend/src/useHealth.ts": "d3b02f4e208099fb640f740182c0048ae738b881f520a033d19fba17598257ec",
+    "frontend/src/useWorkspace.ts": "a6765933346c179059e52f06526b725686f4d4ca96085c680cb63655eb5a9389",
+    "scripts/reconcile_live_exports.py": "c5965cdeb7e8f2decaf4e352488d272e6d60dbbad4c7ebf6e924a15c7934bce3"
+  },
+  "source_review": {
+    "git_history_available": false,
+    "pattern_scan": {
+      "files": 47,
+      "matches": [],
+      "patterns": [
+        "private_key_header",
+        "aws_access_key_shape",
+        "dynamic_code_execution",
+        "html_injection_sink",
+        "shell_true"
+      ]
+    },
+    "reviewed_boundaries": [
+      {
+        "boundary": "HTTP API",
+        "result": "GET-only product routes; bounded and validated queries; explicit trusted hosts and local CORS; generic errors and safe headers."
+      },
+      {
+        "boundary": "Storage",
+        "result": "Read-only SQLite URI; fixed snapshot membership; query values bind SQL parameters."
+      },
+      {
+        "boundary": "SQL rule suppression",
+        "result": "Reviewed repository.py S608 suppression: only question-mark placeholders form the dynamic fragment; all values remain bound parameters."
+      },
+      {
+        "boundary": "Source transport",
+        "result": "Fixed HTTPS Elexon host and dataset allowlist, no redirects, bounded timeouts and retries; source access is CLI-only."
+      },
+      {
+        "boundary": "CSV",
+        "result": "Free-text formula prefixes escaped; numeric negatives retained; quoting and JSON parity tests passed."
+      },
+      {
+        "boundary": "Frontend",
+        "result": "React text rendering; validated API response shapes and snapshot URLs; same-origin API. Vite upstream remains loopback with a validated environment port."
+      },
+      {
+        "boundary": "Dependency scripts",
+        "result": "frontend/.npmrc disables lifecycle scripts. Registry signatures reported no invalid or missing signatures."
+      }
+    ]
+  },
+  "status": "passed"
+}

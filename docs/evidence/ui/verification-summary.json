@@ -1,0 +1,338 @@
+{
+  "recorded_at_utc": "2026-10-26T13:40:42.321228+00:00",
+  "scope": "Mockup-based interactive UI, T02 foundation, and current local health-API security. Analytical integration remains incomplete.",
+  "status": "passed",
+  "checks": [
+    {
+      "command": "make setup",
+      "result": "passed; locked backend sync and clean npm ci with ignore-scripts=true"
+    },
+    {
+      "command": "make check",
+      "result": "passed; 49 backend tests, 28 frontend tests, lint/format/type checks and production build"
+    },
+    {
+      "command": "npm --prefix frontend run test:browser",
+      "result": "20 passed after SCSS conversion",
+      "stats": {
+        "startTime": "2026-10-26T13:24:36.063Z",
+        "duration": 30207.54,
+        "expected": 20,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "command": "node frontend/scripts/verify-runtime.mjs",
+      "result": "8 production viewport/view cases passed, strict CSP/inline-script blocking and bundle budgets verified",
+      "evidence": "production-runtime.json"
+    },
+    {
+      "command": "npm --prefix frontend audit --json",
+      "result": "0 known vulnerabilities",
+      "evidence": "npm-audit.json"
+    },
+    {
+      "command": "npm --prefix frontend audit signatures --json",
+      "result": "exit 0; no invalid/missing entries",
+      "evidence": "npm-signatures.json"
+    },
+    {
+      "command": "uv audit --project backend --locked --python-version 3.12 --python-platform aarch64-apple-darwin",
+      "result": "no known vulnerabilities/adverse statuses in 25 selected packages",
+      "evidence": "../security-backend-review.json"
+    }
+  ],
+  "accessibility": {
+    "axe_scans": 16,
+    "reported_violations": 0,
+    "widths": [
+      320,
+      768,
+      1024,
+      1440
+    ],
+    "views": [
+      "decision",
+      "accuracy"
+    ],
+    "scopes": [
+      "page",
+      "modal"
+    ],
+    "keyboard": "Skip/table links; repeated Tab/Shift+Tab modal wrap; Escape and opener restoration passed."
+  },
+  "browser_cases": [
+    {
+      "file": "responsive.spec.ts",
+      "title": "decision is responsive and passes axe at 320px",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2441
+        }
+      ]
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "accuracy is responsive and passes axe at 320px",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2242
+        }
+      ]
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "decision is responsive and passes axe at 768px",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2022
+        }
+      ]
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "accuracy is responsive and passes axe at 768px",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2114
+        }
+      ]
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "decision is responsive and passes axe at 1024px",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1979
+        }
+      ]
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "accuracy is responsive and passes axe at 1024px",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2173
+        }
+      ]
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "decision is responsive and passes axe at 1440px",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2189
+        }
+      ]
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "accuracy is responsive and passes axe at 1440px",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2361
+        }
+      ]
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "chart animations are brief, never loop, and respect reduced motion",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 563
+        }
+      ]
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "records local UI timing without claiming an API performance benchmark",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 512
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "decision layout is labelled, read-only, and does not request analytical data",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 566
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "applied filters survive reload, view navigation, and browser history",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1211
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "invalid forms remain unapplied with field errors and focus",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 851
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "invalid URL payloads recover safely without rendering markup",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 667
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "decision handles all preview states without stale chart content",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 730
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "accuracy handles all preview states without stale chart content",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 899
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "interval and daily templates follow filters with bounded pagination",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 849
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "keyboard links and native modal focus are usable and restore the opener",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 943
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "process-health failure is retryable without implying dataset availability",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 920
+        }
+      ]
+    },
+    {
+      "file": "ui.spec.ts",
+      "title": "API failure leaves both preview screens usable",
+      "expected_status": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 753
+        }
+      ]
+    }
+  ],
+  "source_review": {
+    "reviewers": [
+      "manager",
+      "frontend implementation agent",
+      "independent UI testing agent",
+      "backend security agent"
+    ],
+    "implementation_files_modified_after_final_browser_run": false,
+    "backend_and_built_runtime_hashes_match_evidence": true,
+    "visual_review": "Supplied mockups compared with rendered desktop/mobile screenshots; final SCSS screenshots inspected."
+  },
+  "files_sha256": {
+    "Makefile": "d387e4fc94d2322db3b1e17c694054f04181aa7610767894e461c1511c8b22ca",
+    "frontend/.npmrc": "761290ca38d627b5dfde3b3a20b9f398165e2ef458afbb4dcef590c05f5cb766",
+    "frontend/e2e/responsive.spec.ts": "e20e2011266a7d17f2ef82063817ec004eba1d64c624059027454401e4a98453",
+    "frontend/e2e/ui.spec.ts": "0f415b1437915aa47b521bcf5173491fb7dda890d197c5eb72341c32f247f5bc",
+    "frontend/package-lock.json": "354bd316fe69eade296cd31b49897ebf7c30e2ea7a08688a233ba0ff5375c11a",
+    "frontend/package.json": "ed85906747b73ea57541b459fd5ef2e0c7f1b4201cc4584565575bab54aa630b",
+    "frontend/playwright.config.ts": "db189a01c7c9be8621b3d14a365537a0811597a4105403495d6bea47ad0db9f8",
+    "frontend/scripts/verify-runtime.mjs": "d9e1bc47da3ce0155b76b324bd7e9554145caff64e872a634723a84dfcec5d10",
+    "frontend/src/App.test.tsx": "acd278cbedf101c7e8c93635dd25ae9d0bbad59e1afcc1f189948b974325ad19",
+    "frontend/src/App.tsx": "385e7f1756f33455e82ff05259a92211c4ea30083e8a77ad26a60808071478f4",
+    "frontend/src/DesignPlaceholder.tsx": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frontend/src/Filters.test.tsx": "a24f769b6ad5aef6003c7d05a7a338d763c9bf89073855201da1515ffaac8944",
+    "frontend/src/components/DataDetails.tsx": "85d3d05a6aaf73f6a9eb5c6f06a2fac18adb52973d0790c128e91b17c0c7038d",
+    "frontend/src/components/Filters.tsx": "5fe78fd753dc58d16e9f25312f7da2d57c9fb90eb22efe1ca1f8a3217275a3a4",
+    "frontend/src/components/Icon.tsx": "77a84145eb330948201edcde798425b23e2cc6214f86c72e5ff72b72dc68f3d3",
+    "frontend/src/components/Layout.tsx": "b624faa535c6f4736681365013e8491c0f471e4244ce96970462fd7167f2ea50",
+    "frontend/src/components/Overview.tsx": "4bd5be595c7d89c956fd0c4b6711dc9ce1fea19e39007a72f4e65e9ec7e5a8e7",
+    "frontend/src/components/Tables.tsx": "7f9fc9f662f3855f418213b5d4ccf3c5547ef3d66b7e8895f61665a97967dc58",
+    "frontend/src/main.tsx": "1fbae184864439782c2f5b0717ff913e89d8bb54ececf07ec6635bd39f40fdb0",
+    "frontend/src/state.test.ts": "1e4e5521007d9a7d099f34ef2d7f7871a6f56ece6dbbebb5279663b555724d21",
+    "frontend/src/state.ts": "bff00d4c68960a06d7416f465f015dba7ffbea691bfdd950221d912eaf138493",
+    "frontend/src/styles/_tokens.scss": "10dc14e529cbe082c5204bcfac034af535788f84702fe85a63f119825a50ad14",
+    "frontend/src/styles.scss": "91669d2e22226ffdc417eeda00d769148ba6a18100343244a6686a52ad1ef907",
+    "frontend/src/test/setup.ts": "6b14777ea9088857e29c122b5f7bf67a8b8c50ec025801907d85369368ed8de4",
+    "frontend/src/types.test.ts": "71429a0e3341d068077ed7ec34e55f3f413c7ccd226d5713eb4a9964bc13cdd1",
+    "frontend/src/types.ts": "8c87b629a0a80b1bd93c39d52f0418c4571c32a551ea46a0a04f190fbf91b3d2",
+    "frontend/src/useHealth.test.tsx": "d35c50a1f0f1ffca737e2d8259e9b9d92c535c4b3aa88977a3ac96686161b8dd",
+    "frontend/src/useHealth.ts": "d3b02f4e208099fb640f740182c0048ae738b881f520a033d19fba17598257ec",
+    "frontend/src/useWorkspace.ts": "99a519b42d291cc267e9d3395502fe54ae180ec3f2e8aa969e8ac7d23f46c647",
+    "frontend/vite.config.ts": "afe7d601548798c97e991bad04ab58c9b8d642194f4ac8b7c3a46b2f0981f147",
+    "frontend/vitest.config.ts": "5fe5554a9ffafc2ec1e8da8c00b359486c63f3ff1bc2e2770b2dba0b971981b5"
+  },
+  "limits": [
+    "Interactive preview uses schematic curves and unavailable measured values.",
+    "Only Chromium on the recorded macOS arm64 host was exercised.",
+    "Not exhaustive penetration testing, complete WCAG certification, field performance, or a guarantee against unknown defects.",
+    "No ingestion, snapshots, analytical APIs, metrics, CSV parity, authentication or production deployment exists."
+  ]
+}

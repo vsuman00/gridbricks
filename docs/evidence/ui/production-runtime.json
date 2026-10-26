@@ -1,0 +1,163 @@
+{
+  "checked_at_utc": "2026-10-26T17:00:07.575Z",
+  "scope": "Production UI with real local API and isolated synthetic snapshot; analytical API benchmark recorded separately.",
+  "environment": {
+    "node": "v26.5.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "machine": "Apple M4"
+  },
+  "assets": [
+    {
+      "name": "index-C7A-lhM6.css",
+      "bytes": 18067,
+      "gzip_bytes": 4712,
+      "sha256": "ce095c9e90bf1f62d2ee5bb4322a7049232e74698681578845f91bd2b0ce7681"
+    },
+    {
+      "name": "index-CjDxzPMQ.js",
+      "bytes": 265379,
+      "gzip_bytes": 80135,
+      "sha256": "3c2b68b8e58e2fb46a75b3f3ccc31c61dff823953af123e03e38cc36c7241eae"
+    }
+  ],
+  "cases": [
+    {
+      "view": "decision",
+      "width": 320,
+      "cls": 0,
+      "longTasks": [],
+      "shifts": [],
+      "dcl_ms": 74.79999999701977,
+      "load_ms": 74.79999999701977,
+      "overflow": false,
+      "running_animations": 0,
+      "frame_gap_p95_ms": 16.700000000000045,
+      "external_requests": 0,
+      "browser_errors": []
+    },
+    {
+      "view": "decision",
+      "width": 768,
+      "cls": 0,
+      "longTasks": [],
+      "shifts": [],
+      "dcl_ms": 31,
+      "load_ms": 31,
+      "overflow": false,
+      "running_animations": 0,
+      "frame_gap_p95_ms": 16.799999999999955,
+      "external_requests": 0,
+      "browser_errors": []
+    },
+    {
+      "view": "decision",
+      "width": 1024,
+      "cls": 0,
+      "longTasks": [],
+      "shifts": [],
+      "dcl_ms": 30.200000002980232,
+      "load_ms": 30.200000002980232,
+      "overflow": false,
+      "running_animations": 0,
+      "frame_gap_p95_ms": 16.700000000000045,
+      "external_requests": 0,
+      "browser_errors": []
+    },
+    {
+      "view": "decision",
+      "width": 1440,
+      "cls": 0,
+      "longTasks": [],
+      "shifts": [],
+      "dcl_ms": 27.299999997019768,
+      "load_ms": 27.299999997019768,
+      "overflow": false,
+      "running_animations": 0,
+      "frame_gap_p95_ms": 16.700000000000045,
+      "external_requests": 0,
+      "browser_errors": []
+    },
+    {
+      "view": "accuracy",
+      "width": 320,
+      "cls": 0,
+      "longTasks": [
+        103
+      ],
+      "shifts": [],
+      "dcl_ms": 27.299999997019768,
+      "load_ms": 27.299999997019768,
+      "overflow": false,
+      "running_animations": 0,
+      "frame_gap_p95_ms": 16.799999999999955,
+      "external_requests": 0,
+      "browser_errors": []
+    },
+    {
+      "view": "accuracy",
+      "width": 768,
+      "cls": 0,
+      "longTasks": [
+        103
+      ],
+      "shifts": [],
+      "dcl_ms": 29.5,
+      "load_ms": 29.5,
+      "overflow": false,
+      "running_animations": 0,
+      "frame_gap_p95_ms": 16.700000000000045,
+      "external_requests": 0,
+      "browser_errors": []
+    },
+    {
+      "view": "accuracy",
+      "width": 1024,
+      "cls": 0,
+      "longTasks": [
+        102
+      ],
+      "shifts": [],
+      "dcl_ms": 29,
+      "load_ms": 29,
+      "overflow": false,
+      "running_animations": 0,
+      "frame_gap_p95_ms": 16.799999999999955,
+      "external_requests": 0,
+      "browser_errors": []
+    },
+    {
+      "view": "accuracy",
+      "width": 1440,
+      "cls": 0,
+      "longTasks": [
+        102
+      ],
+      "shifts": [],
+      "dcl_ms": 29.700000002980232,
+      "load_ms": 29.700000002980232,
+      "overflow": false,
+      "running_animations": 0,
+      "frame_gap_p95_ms": 16.799999999999955,
+      "external_requests": 0,
+      "browser_errors": []
+    }
+  ],
+  "fixture_snapshot_id": "1982c7538df84eb384cbab1823d6053b",
+  "headers": {
+    "cache-control": "no-cache",
+    "connection": "keep-alive",
+    "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'none'; object-src 'none'",
+    "content-type": "text/html",
+    "date": "Mon, 26 Oct 2026 17:00:07 GMT",
+    "etag": "W/\"26e-wk19iJCUrl1ZdqIe95RFTAr4yp8\"",
+    "keep-alive": "timeout=5",
+    "referrer-policy": "no-referrer",
+    "transfer-encoding": "chunked",
+    "vary": "Origin",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY"
+  },
+  "inline_script_blocked": true,
+  "status": "passed"
+}

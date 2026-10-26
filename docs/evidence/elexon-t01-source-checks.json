@@ -1,0 +1,330 @@
+{
+  "checked_at_utc": "2026-10-26T10:57:43.633371Z",
+  "purpose": "Read-only T01 source samples; not ingestion, a full-month audit, or accuracy validation.",
+  "results": [
+    {
+      "name": "forecast-2026-01-01",
+      "dataset": "WINDFOR",
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-25T09%3A30%3A00Z&publishDateTimeTo=2026-01-01T09%3A30%3A00Z",
+      "http_status": 200,
+      "response_sha256": "d7398ac5f54bdec07c4b51a978f52d61620d6fdc8956f51ab5b291f1f8e3f5ec",
+      "status": "succeeded",
+      "total_records": 4161,
+      "wind_records": 4161,
+      "same_key_conflicts": 0,
+      "targets_with_multiple_publications": 241,
+      "exact_duplicate_count": 0,
+      "sample_records": [
+        {
+          "dataset": "WINDFOR",
+          "publishTime": "2026-01-01T09:30:00Z",
+          "startTime": "2025-12-31T21:00:00Z",
+          "generation": 19498
+        },
+        {
+          "dataset": "WINDFOR",
+          "publishTime": "2026-01-01T09:30:00Z",
+          "startTime": "2025-12-31T22:00:00Z",
+          "generation": 19866
+        }
+      ],
+      "publication_bounds": [
+        "2025-12-25T09:30:00Z",
+        "2026-01-01T09:30:00Z"
+      ],
+      "decision_date": "2026-01-01",
+      "delivery_date": "2026-01-02",
+      "cutoff_utc": "2026-01-01T09:30:00Z",
+      "expected_targets": 24,
+      "observed_eligible_targets": 24,
+      "missing_targets": [],
+      "records_at_cutoff": 24
+    },
+    {
+      "name": "actual-2026-01-02",
+      "dataset": "FUELHH",
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-01-02&settlementDateTo=2026-01-02&fuelType=WIND",
+      "http_status": 200,
+      "response_sha256": "8c8a430566cf844b0db55202e8f1b8ad74f06053685cb1d2b5d678bb6af01d0e",
+      "status": "succeeded",
+      "total_records": 48,
+      "wind_records": 48,
+      "same_key_conflicts": 0,
+      "targets_with_multiple_publications": 0,
+      "exact_duplicate_count": 0,
+      "sample_records": [
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-01-03T00:00:00Z",
+          "startTime": "2026-01-02T23:30:00Z",
+          "settlementDate": "2026-01-02",
+          "settlementPeriod": 48,
+          "fuelType": "WIND",
+          "generation": 14202
+        },
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-01-02T23:30:00Z",
+          "startTime": "2026-01-02T23:00:00Z",
+          "settlementDate": "2026-01-02",
+          "settlementPeriod": 47,
+          "fuelType": "WIND",
+          "generation": 14133
+        }
+      ],
+      "publication_bounds": [
+        "2026-01-02T00:30:00Z",
+        "2026-01-03T00:00:00Z"
+      ],
+      "decision_date": "2026-01-01",
+      "delivery_date": "2026-01-02",
+      "cutoff_utc": "2026-01-01T09:30:00Z",
+      "expected_targets": 48,
+      "observed_eligible_targets": 48,
+      "missing_targets": [],
+      "final_half_hour_present": true
+    },
+    {
+      "name": "forecast-2026-01-15",
+      "dataset": "WINDFOR",
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-08T09%3A30%3A00Z&publishDateTimeTo=2026-01-15T09%3A30%3A00Z",
+      "http_status": 200,
+      "response_sha256": "b7c959f623c3435f88cd23425c91737ec640e1d68a3bd004de422fd8c1f7aecb",
+      "status": "succeeded",
+      "total_records": 4161,
+      "wind_records": 4161,
+      "same_key_conflicts": 0,
+      "targets_with_multiple_publications": 241,
+      "exact_duplicate_count": 0,
+      "sample_records": [
+        {
+          "dataset": "WINDFOR",
+          "publishTime": "2026-01-15T09:30:00Z",
+          "startTime": "2026-01-14T21:00:00Z",
+          "generation": 16732
+        },
+        {
+          "dataset": "WINDFOR",
+          "publishTime": "2026-01-15T09:30:00Z",
+          "startTime": "2026-01-14T22:00:00Z",
+          "generation": 17022
+        }
+      ],
+      "publication_bounds": [
+        "2026-01-08T09:30:00Z",
+        "2026-01-15T09:30:00Z"
+      ],
+      "decision_date": "2026-01-15",
+      "delivery_date": "2026-01-16",
+      "cutoff_utc": "2026-01-15T09:30:00Z",
+      "expected_targets": 24,
+      "observed_eligible_targets": 24,
+      "missing_targets": [],
+      "records_at_cutoff": 24
+    },
+    {
+      "name": "actual-2026-01-16",
+      "dataset": "FUELHH",
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-01-16&settlementDateTo=2026-01-16&fuelType=WIND",
+      "http_status": 200,
+      "response_sha256": "ee982bb08bf66a8559da94a573ecf3e8e368ab02d8397d2912afea6a5cac7e64",
+      "status": "succeeded",
+      "total_records": 48,
+      "wind_records": 48,
+      "same_key_conflicts": 0,
+      "targets_with_multiple_publications": 0,
+      "exact_duplicate_count": 0,
+      "sample_records": [
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-01-17T00:00:00Z",
+          "startTime": "2026-01-16T23:30:00Z",
+          "settlementDate": "2026-01-16",
+          "settlementPeriod": 48,
+          "fuelType": "WIND",
+          "generation": 9116
+        },
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-01-16T23:30:00Z",
+          "startTime": "2026-01-16T23:00:00Z",
+          "settlementDate": "2026-01-16",
+          "settlementPeriod": 47,
+          "fuelType": "WIND",
+          "generation": 9214
+        }
+      ],
+      "publication_bounds": [
+        "2026-01-16T00:30:00Z",
+        "2026-01-17T00:00:00Z"
+      ],
+      "decision_date": "2026-01-15",
+      "delivery_date": "2026-01-16",
+      "cutoff_utc": "2026-01-15T09:30:00Z",
+      "expected_targets": 48,
+      "observed_eligible_targets": 48,
+      "missing_targets": [],
+      "final_half_hour_present": true
+    },
+    {
+      "name": "forecast-2026-01-31",
+      "dataset": "WINDFOR",
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-24T09%3A30%3A00Z&publishDateTimeTo=2026-01-31T09%3A30%3A00Z",
+      "http_status": 200,
+      "response_sha256": "e81bf13ada87fba8bac40aebc353ec699edc7c34418e2b79f24cf1f88422bba0",
+      "status": "succeeded",
+      "total_records": 4161,
+      "wind_records": 4161,
+      "same_key_conflicts": 0,
+      "targets_with_multiple_publications": 241,
+      "exact_duplicate_count": 0,
+      "sample_records": [
+        {
+          "dataset": "WINDFOR",
+          "publishTime": "2026-01-31T09:30:00Z",
+          "startTime": "2026-01-30T21:00:00Z",
+          "generation": 17683
+        },
+        {
+          "dataset": "WINDFOR",
+          "publishTime": "2026-01-31T09:30:00Z",
+          "startTime": "2026-01-30T22:00:00Z",
+          "generation": 17313
+        }
+      ],
+      "publication_bounds": [
+        "2026-01-24T09:30:00Z",
+        "2026-01-31T09:30:00Z"
+      ],
+      "decision_date": "2026-01-31",
+      "delivery_date": "2026-02-01",
+      "cutoff_utc": "2026-01-31T09:30:00Z",
+      "expected_targets": 24,
+      "observed_eligible_targets": 24,
+      "missing_targets": [],
+      "records_at_cutoff": 24
+    },
+    {
+      "name": "actual-2026-02-01",
+      "dataset": "FUELHH",
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-02-01&settlementDateTo=2026-02-01&fuelType=WIND",
+      "http_status": 200,
+      "response_sha256": "15e5f5dcb2e3233e40a5dd964f1c99672f8a0a7a640d73fce8652124869984be",
+      "status": "succeeded",
+      "total_records": 48,
+      "wind_records": 48,
+      "same_key_conflicts": 0,
+      "targets_with_multiple_publications": 0,
+      "exact_duplicate_count": 0,
+      "sample_records": [
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-02-02T00:00:00Z",
+          "startTime": "2026-02-01T23:30:00Z",
+          "settlementDate": "2026-02-01",
+          "settlementPeriod": 48,
+          "fuelType": "WIND",
+          "generation": 5302
+        },
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-02-01T23:30:00Z",
+          "startTime": "2026-02-01T23:00:00Z",
+          "settlementDate": "2026-02-01",
+          "settlementPeriod": 47,
+          "fuelType": "WIND",
+          "generation": 5130
+        }
+      ],
+      "publication_bounds": [
+        "2026-02-01T00:30:00Z",
+        "2026-02-02T00:00:00Z"
+      ],
+      "decision_date": "2026-01-31",
+      "delivery_date": "2026-02-01",
+      "cutoff_utc": "2026-01-31T09:30:00Z",
+      "expected_targets": 48,
+      "observed_eligible_targets": 48,
+      "missing_targets": [],
+      "final_half_hour_present": true
+    },
+    {
+      "name": "boundary-2026-01-15T23:30:00Z",
+      "dataset": "FUELHH",
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?publishDateTimeFrom=2026-01-15T23%3A30%3A00Z&publishDateTimeTo=2026-01-16T00%3A00%3A00Z&fuelType=WIND",
+      "http_status": 200,
+      "response_sha256": "11a297566de4e750d1167829ff59a1596382cdb8fcd36922552fc1d6c56a5e4b",
+      "status": "succeeded",
+      "total_records": 2,
+      "wind_records": 2,
+      "same_key_conflicts": 0,
+      "targets_with_multiple_publications": 0,
+      "exact_duplicate_count": 0,
+      "sample_records": [
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-01-16T00:00:00Z",
+          "startTime": "2026-01-15T23:30:00Z",
+          "settlementDate": "2026-01-15",
+          "settlementPeriod": 48,
+          "fuelType": "WIND",
+          "generation": 7407
+        },
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-01-15T23:30:00Z",
+          "startTime": "2026-01-15T23:00:00Z",
+          "settlementDate": "2026-01-15",
+          "settlementPeriod": 47,
+          "fuelType": "WIND",
+          "generation": 7258
+        }
+      ],
+      "publication_bounds": [
+        "2026-01-15T23:30:00Z",
+        "2026-01-16T00:00:00Z"
+      ],
+      "records_at_lower_bound": 1,
+      "records_at_upper_bound": 1
+    },
+    {
+      "name": "boundary-2026-01-16T00:00:00Z",
+      "dataset": "FUELHH",
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?publishDateTimeFrom=2026-01-16T00%3A00%3A00Z&publishDateTimeTo=2026-01-16T00%3A30%3A00Z&fuelType=WIND",
+      "http_status": 200,
+      "response_sha256": "db7e0e1126c3201ea8c92ce289f1a47c731835a4d451ef3ee7a5694358bfebce",
+      "status": "succeeded",
+      "total_records": 2,
+      "wind_records": 2,
+      "same_key_conflicts": 0,
+      "targets_with_multiple_publications": 0,
+      "exact_duplicate_count": 0,
+      "sample_records": [
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-01-16T00:30:00Z",
+          "startTime": "2026-01-16T00:00:00Z",
+          "settlementDate": "2026-01-16",
+          "settlementPeriod": 1,
+          "fuelType": "WIND",
+          "generation": 7477
+        },
+        {
+          "dataset": "FUELHH",
+          "publishTime": "2026-01-16T00:00:00Z",
+          "startTime": "2026-01-15T23:30:00Z",
+          "settlementDate": "2026-01-15",
+          "settlementPeriod": 48,
+          "fuelType": "WIND",
+          "generation": 7407
+        }
+      ],
+      "publication_bounds": [
+        "2026-01-16T00:00:00Z",
+        "2026-01-16T00:30:00Z"
+      ],
+      "records_at_lower_bound": 1,
+      "records_at_upper_bound": 1
+    }
+  ]
+}

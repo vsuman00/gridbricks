@@ -1,0 +1,84 @@
+{
+  "checked_at_utc": "2026-10-26T17:08:24.461039+00:00",
+  "status": "passed",
+  "command": "backend/.venv/bin/python scripts/reconcile_live_exports.py",
+  "environment": {
+    "python": "3.12.12",
+    "platform": "macOS-27.0.1-arm64-arm-64bit"
+  },
+  "method": "Owned HTTP server; stdlib CSV parsing and independent metric equations.",
+  "snapshot_id": "9e2b992d3cb943aa9a82d4c3e71fd68f",
+  "input_hash": "dfebf7e8895557c162096eb06e3cf1fcf17971e5dbd29974290310de231bb94d",
+  "accuracy": {
+    "view": "accuracy",
+    "expected_rows": 744,
+    "snapshot_id": "9e2b992d3cb943aa9a82d4c3e71fd68f",
+    "input_hash": "dfebf7e8895557c162096eb06e3cf1fcf17971e5dbd29974290310de231bb94d",
+    "source_mode": "live",
+    "coverage": {
+      "expected_count": 744,
+      "forecast_selected_count": 744,
+      "reason_counts": {
+        "matched": 744
+      },
+      "complete_actual_count": 744,
+      "matched_count": 744,
+      "matched_fraction": 1.0
+    },
+    "policy_and_row_parity": true,
+    "source_and_constituent_lineage_parity": true,
+    "response_sha256": {
+      "json": "fbcfdfa503985adf6bb4e83bad5c73d147e7a72f3361cb14fe0ec21f72b480f7",
+      "csv": "0d54e352a51a2d3acf6c86aff2bce495031c0ec105faaab156bec208311846a2"
+    },
+    "download_bytes": {
+      "json": 1090581,
+      "csv": 1160743
+    },
+    "matched_rows": 744,
+    "recomputed_metrics": {
+      "mae_mw": 1995.5685483870968,
+      "rmse_mw": 2498.8245110107187,
+      "bias_mw": 1727.9825268817203
+    },
+    "json_metrics": {
+      "mae_mw": 1995.5685483870968,
+      "rmse_mw": 2498.8245110107187,
+      "bias_mw": 1727.9825268817203
+    },
+    "metrics_parity": true,
+    "reason_counts_from_csv": {
+      "matched": 744
+    },
+    "comparison_note": "Timestamp-matched benchmark: WINDFOR compared with the half-hour average starting at the same timestamp; physical averaging equivalence is unverified."
+  },
+  "forecast": {
+    "view": "forecast",
+    "expected_rows": 24,
+    "snapshot_id": "9e2b992d3cb943aa9a82d4c3e71fd68f",
+    "input_hash": "dfebf7e8895557c162096eb06e3cf1fcf17971e5dbd29974290310de231bb94d",
+    "source_mode": "live",
+    "coverage": {
+      "expected_count": 24,
+      "forecast_selected_count": 24,
+      "reason_counts": {
+        "selected": 24
+      }
+    },
+    "policy_and_row_parity": true,
+    "source_and_constituent_lineage_parity": true,
+    "response_sha256": {
+      "json": "c8207e3af608b086e4d373b69c0f6e6fda9001439727d92fc16b19e1d0b0eb06",
+      "csv": "aa2ed9f35a85d46fb299ab5650e98a4a5b8f2c4644593990e2baaf2495cbfa5f"
+    },
+    "download_bytes": {
+      "json": 19354,
+      "csv": 23884
+    }
+  },
+  "limits": [
+    "Checks API/CSV parity, not independent correctness of source observations.",
+    "Averaging equivalence remains unverified; metrics describe the named benchmark.",
+    "No ingestion or source downloads occurred; the existing live snapshot was read only."
+  ]
+}

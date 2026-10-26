@@ -1,0 +1,1639 @@
+{
+  "analytical_audit": {
+    "analysis": {
+      "coverage": {
+        "complete_actual_count": 744,
+        "expected_count": 744,
+        "forecast_selected_count": 744,
+        "matched_count": 744,
+        "matched_fraction": 1.0,
+        "reason_counts": {
+          "matched": 744
+        }
+      },
+      "daily": [
+        {
+          "bias_mw": 3156.6666666666665,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-01",
+          "delivery_date": "2026-01-02",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 3156.6666666666665,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 3212.8537159354146
+        },
+        {
+          "bias_mw": 2098.5,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-02",
+          "delivery_date": "2026-01-03",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 2098.5,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 2467.101335575821
+        },
+        {
+          "bias_mw": 823.375,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-03",
+          "delivery_date": "2026-01-04",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 852.9583333333334,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 966.7863216174849
+        },
+        {
+          "bias_mw": -28.91666666666666,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-04",
+          "delivery_date": "2026-01-05",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1031.0,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1252.57774209827
+        },
+        {
+          "bias_mw": 2118.75,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-05",
+          "delivery_date": "2026-01-06",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 2205.3333333333335,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 2596.17121931509
+        },
+        {
+          "bias_mw": 1319.25,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-06",
+          "delivery_date": "2026-01-07",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1359.1666666666667,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1678.0981298283286
+        },
+        {
+          "bias_mw": 631.1666666666666,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-07",
+          "delivery_date": "2026-01-08",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1951.25,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 2216.821128703592
+        },
+        {
+          "bias_mw": 754.6666666666666,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-08",
+          "delivery_date": "2026-01-09",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 830.3333333333334,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1059.9131253708172
+        },
+        {
+          "bias_mw": -105.29166666666669,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-09",
+          "delivery_date": "2026-01-10",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1069.7916666666667,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1208.1348055301337
+        },
+        {
+          "bias_mw": 4948.458333333333,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-10",
+          "delivery_date": "2026-01-11",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 4948.458333333333,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 5020.451195692807
+        },
+        {
+          "bias_mw": 4908.041666666667,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-11",
+          "delivery_date": "2026-01-12",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 4908.041666666667,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 5196.567709395629
+        },
+        {
+          "bias_mw": 527.4166666666666,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-12",
+          "delivery_date": "2026-01-13",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1213.4166666666667,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1351.3110609083808
+        },
+        {
+          "bias_mw": -125.24999999999999,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-13",
+          "delivery_date": "2026-01-14",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 937.6666666666666,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1041.408981460534
+        },
+        {
+          "bias_mw": 1093.625,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-14",
+          "delivery_date": "2026-01-15",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1093.625,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1229.3976675591996
+        },
+        {
+          "bias_mw": 393.5,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-15",
+          "delivery_date": "2026-01-16",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 897.3333333333334,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1124.3055263880308
+        },
+        {
+          "bias_mw": 1856.75,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-16",
+          "delivery_date": "2026-01-17",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1856.75,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1920.14654388669
+        },
+        {
+          "bias_mw": 1425.4166666666667,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-17",
+          "delivery_date": "2026-01-18",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1425.4166666666667,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1499.7624534127622
+        },
+        {
+          "bias_mw": -744.375,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-18",
+          "delivery_date": "2026-01-19",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 750.0416666666666,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 836.3654753355936
+        },
+        {
+          "bias_mw": 210.24999999999997,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-19",
+          "delivery_date": "2026-01-20",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 925.75,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1251.1578304381374
+        },
+        {
+          "bias_mw": 3862.125,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-20",
+          "delivery_date": "2026-01-21",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 3862.125,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 3933.951167931126
+        },
+        {
+          "bias_mw": 2610.75,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-21",
+          "delivery_date": "2026-01-22",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 2610.75,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 2734.2467884227276
+        },
+        {
+          "bias_mw": 1819.9166666666667,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-22",
+          "delivery_date": "2026-01-23",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1819.9166666666667,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1910.1550111618342
+        },
+        {
+          "bias_mw": 1655.375,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-23",
+          "delivery_date": "2026-01-24",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1681.4583333333333,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 2001.5089203731604
+        },
+        {
+          "bias_mw": 1766.4583333333333,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-24",
+          "delivery_date": "2026-01-25",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1766.4583333333333,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1952.0705780444177
+        },
+        {
+          "bias_mw": 2049.6666666666665,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-25",
+          "delivery_date": "2026-01-26",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 2059.0,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 2459.3508459212026
+        },
+        {
+          "bias_mw": 3417.0,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-26",
+          "delivery_date": "2026-01-27",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 3417.0,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 3484.8811792273973
+        },
+        {
+          "bias_mw": 5328.958333333333,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-27",
+          "delivery_date": "2026-01-28",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 5328.958333333333,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 5355.708624916035
+        },
+        {
+          "bias_mw": 1594.9583333333333,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-28",
+          "delivery_date": "2026-01-29",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1594.9583333333333,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1637.9546061068565
+        },
+        {
+          "bias_mw": 1581.5416666666667,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-29",
+          "delivery_date": "2026-01-30",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1581.5416666666667,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1704.407167218757
+        },
+        {
+          "bias_mw": 1814.875,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-30",
+          "delivery_date": "2026-01-31",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 1814.875,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 1942.9655062129473
+        },
+        {
+          "bias_mw": 803.8333333333334,
+          "complete_actual_count": 24,
+          "decision_date": "2026-01-31",
+          "delivery_date": "2026-02-01",
+          "expected_count": 24,
+          "forecast_selected_count": 24,
+          "mae_mw": 814.0833333333334,
+          "matched_count": 24,
+          "matched_fraction": 1.0,
+          "reason_counts": {
+            "matched": 24
+          },
+          "rmse_mw": 921.1421804839179
+        }
+      ],
+      "meta": {
+        "actual_policy": "latest_in_snapshot_v1",
+        "alignment_policy": "timestamp_matched_halfhour_reference_v1",
+        "comparison_note": "Timestamp-matched benchmark: WINDFOR compared with the half-hour average starting at the same timestamp; physical averaging equivalence is unverified.",
+        "comparison_resolution_minutes": 60,
+        "cutoff_local": "09:30",
+        "decision_from": "2026-01-01",
+        "decision_to": "2026-01-31",
+        "delivery_from": "2026-01-02",
+        "delivery_to": "2026-02-01",
+        "evaluation_mode": "retrospective",
+        "input_hash": "dfebf7e8895557c162096eb06e3cf1fcf17971e5dbd29974290310de231bb94d",
+        "metric_policy": "pooled_errors_v1",
+        "retrieved_at": "2026-10-26T14:20:23.014875Z",
+        "selection_policy": "asof_per_target_v1",
+        "snapshot_id": "9e2b992d3cb943aa9a82d4c3e71fd68f",
+        "source_mode": "live",
+        "timezone": "Europe/London",
+        "unit": "MW"
+      },
+      "metrics": {
+        "bias_mw": 1727.9825268817203,
+        "mae_mw": 1995.5685483870968,
+        "rmse_mw": 2498.8245110107187
+      }
+    },
+    "cutoff": "09:30",
+    "forecast_coverage": {
+      "expected_count": 744,
+      "forecast_selected_count": 744,
+      "reason_counts": {
+        "selected": 744
+      }
+    }
+  },
+  "limitations": [
+    "Observed target coverage does not establish completeness of every historical revision.",
+    "Forecast publication history is bounded by the recorded search window.",
+    "FUELHH WIND settlement-date responses retain all revisions returned by Elexon at retrieval; this is not final settlement truth.",
+    "The timestamp-matched half-hour comparator is a retrospective reference benchmark, not an hourly average or energy calculation."
+  ],
+  "publication": {
+    "method": "Saved raw inputs replayed under the documented ADR-002 policy; no new network request during replay.",
+    "network_downloaded_windows": 69,
+    "original_acquisition_input_hash": "804753cfcfac2408c5c5f18fc69f2403b43283b3e4b2745bff48916642b898f3",
+    "original_acquisition_snapshot_id": "f3ca9e2bc15a45e6a44160403c099313",
+    "replay_preserves_original_retrieval_timestamps": true
+  },
+  "purpose": "Live Elexon ingestion evidence, separate from synthetic fixture tests.",
+  "raw_inputs": [
+    {
+      "content_hash": "b412f02953bef9de4e2c5a32e846ba66895ee830087ab78c97f2eea96cb88c83",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-25T00%3A00%3A00Z&publishDateTimeTo=2025-12-26T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:03.657724Z"
+    },
+    {
+      "content_hash": "8532e16e0a199ec8b54c54c45586be6722b6921870d645f1111da1c5eeb35096",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-26T00%3A00%3A00Z&publishDateTimeTo=2025-12-27T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:03.861539Z"
+    },
+    {
+      "content_hash": "63e1f45c342440570d5ffeac3677f2c9445bf1e2bbad22e106eda7fed35e97e4",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-27T00%3A00%3A00Z&publishDateTimeTo=2025-12-28T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:04.503332Z"
+    },
+    {
+      "content_hash": "26eca9157fd4df53342c302390d503913270420ae44edda0d57b5a5f03a44972",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-28T00%3A00%3A00Z&publishDateTimeTo=2025-12-29T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:04.837305Z"
+    },
+    {
+      "content_hash": "3db7bc324599896975dd12c991178ad013c60d7cae315d12d9a9c521d6cb826b",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-29T00%3A00%3A00Z&publishDateTimeTo=2025-12-30T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:05.064743Z"
+    },
+    {
+      "content_hash": "c385cb1e794c230185c31b0cfb931b4c9a2764cf2c1bc1461caac0d5e1a2c2a9",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-30T00%3A00%3A00Z&publishDateTimeTo=2025-12-31T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:05.262927Z"
+    },
+    {
+      "content_hash": "fd23186984084e41570d8f3895b912e4c0ec034d54d3e1553bfc1e6cbca50982",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2025-12-31T00%3A00%3A00Z&publishDateTimeTo=2026-01-01T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:05.468934Z"
+    },
+    {
+      "content_hash": "5c70f8994f0a4bdc2fef6de699a53320a5d568dc515154b40933fa8362046cc4",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-01T00%3A00%3A00Z&publishDateTimeTo=2026-01-02T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:05.728046Z"
+    },
+    {
+      "content_hash": "23c58bbcb18bc731cb40d70860eaaa953b6ca49a6df5934763eca5ef8b2cf90f",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-02T00%3A00%3A00Z&publishDateTimeTo=2026-01-03T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:05.994935Z"
+    },
+    {
+      "content_hash": "5eefbe5490290b20abaa1cf76bb3db36b28e8b530affbf071a7bad2eb84b0a29",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-03T00%3A00%3A00Z&publishDateTimeTo=2026-01-04T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:06.280469Z"
+    },
+    {
+      "content_hash": "7047c1237868ade4636a01b08a69d359fc1dc1646654974e6c50d09c806e2cb4",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-04T00%3A00%3A00Z&publishDateTimeTo=2026-01-05T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:06.547689Z"
+    },
+    {
+      "content_hash": "071b2d6de3fb8867b0b0cfc506b5fcbfcc220c610847c9dca9c1ba7f6a1bb664",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-05T00%3A00%3A00Z&publishDateTimeTo=2026-01-06T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:06.843829Z"
+    },
+    {
+      "content_hash": "fd9574e7622b368aae89b8c85bc88b14596f0ab2d637b659942a82a15176e243",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-06T00%3A00%3A00Z&publishDateTimeTo=2026-01-07T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:07.139005Z"
+    },
+    {
+      "content_hash": "7312c679a22c651f55ed18839e15f7636b9c020f59a3efed232548651fdbaea2",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-07T00%3A00%3A00Z&publishDateTimeTo=2026-01-08T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:07.431648Z"
+    },
+    {
+      "content_hash": "05dc93590d3f44ed10706353e14ea3ee8e661b001b016105f14af74337923113",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-08T00%3A00%3A00Z&publishDateTimeTo=2026-01-09T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:07.724066Z"
+    },
+    {
+      "content_hash": "e80c6487f6672f1abfc3fc1a361b0b8f41bb8e6f7ae185380e807f5dda8be478",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-09T00%3A00%3A00Z&publishDateTimeTo=2026-01-10T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:08.025576Z"
+    },
+    {
+      "content_hash": "c927f7ead62de423de5c6600883f0488424a0df399fd06d7a9e2356961777124",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-10T00%3A00%3A00Z&publishDateTimeTo=2026-01-11T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:08.378263Z"
+    },
+    {
+      "content_hash": "0acd90eb269583b5fbd9f358e39b76932c3643224c64ee72dc28957fa9977353",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-11T00%3A00%3A00Z&publishDateTimeTo=2026-01-12T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:08.656717Z"
+    },
+    {
+      "content_hash": "7f17243806e336a108c99e9f3f02b8b5441c43474cc0998642b09f867aa8532f",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-12T00%3A00%3A00Z&publishDateTimeTo=2026-01-13T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:08.948427Z"
+    },
+    {
+      "content_hash": "6fec3644426feec9eb6f0e634a7e6a11c3b720976246e1c1b9fe415bcd1cfa1c",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-13T00%3A00%3A00Z&publishDateTimeTo=2026-01-14T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:09.238932Z"
+    },
+    {
+      "content_hash": "37358009876280f32035d11c26e6db1f9953674514db1cc23f8326de7b217130",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-14T00%3A00%3A00Z&publishDateTimeTo=2026-01-15T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:09.535575Z"
+    },
+    {
+      "content_hash": "665fcbfe7c0798034473693fa06019f5a4dfa2986ea1acbe340ce20ff561a040",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-15T00%3A00%3A00Z&publishDateTimeTo=2026-01-16T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:09.833634Z"
+    },
+    {
+      "content_hash": "d03f411172e79e15ccf1b33cf05935eedc8781d1c82b3a7ddb43f2007fe9691f",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-16T00%3A00%3A00Z&publishDateTimeTo=2026-01-17T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:10.131213Z"
+    },
+    {
+      "content_hash": "241c6fb7b8796ec931ddf51c6debede31075855dbba49cd6f26ef8e60086376e",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-17T00%3A00%3A00Z&publishDateTimeTo=2026-01-18T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:10.460412Z"
+    },
+    {
+      "content_hash": "0209dc81f4aca1f4812d61edc1a8c71243501f8f5f87b98d8ead55eda74ec4ce",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-18T00%3A00%3A00Z&publishDateTimeTo=2026-01-19T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:10.755199Z"
+    },
+    {
+      "content_hash": "63c77d1b550aa2bdc11c61a06787231490c8448212da030db537da405e6f04c1",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-19T00%3A00%3A00Z&publishDateTimeTo=2026-01-20T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:11.052994Z"
+    },
+    {
+      "content_hash": "e28633e28560b3e006f42452622ca35f500a5629687e6b11481162e196961057",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-20T00%3A00%3A00Z&publishDateTimeTo=2026-01-21T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:11.359151Z"
+    },
+    {
+      "content_hash": "e8d1e4a55fafd22cc581dda8ea97152d3778c87c9b4f238af68b91fe15ef1691",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-21T00%3A00%3A00Z&publishDateTimeTo=2026-01-22T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:11.660950Z"
+    },
+    {
+      "content_hash": "9e33bf649f878427d34341f19a72579e20b398aef70ae2a233aa8f595505b178",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-22T00%3A00%3A00Z&publishDateTimeTo=2026-01-23T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:11.964165Z"
+    },
+    {
+      "content_hash": "c2929b55439665f48b8ae40c0aace04d3959189ee84d7f505b1fd8d228dc71f7",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-23T00%3A00%3A00Z&publishDateTimeTo=2026-01-24T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:12.271710Z"
+    },
+    {
+      "content_hash": "6d4614f482f01f2bd37a74b63a27a133729f0efd4ce27d1a9648db36d3cdf2d6",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-24T00%3A00%3A00Z&publishDateTimeTo=2026-01-25T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:12.576852Z"
+    },
+    {
+      "content_hash": "2cce49c740304b963f1a358812aebd86265ab3a76cf502ab08f1fd29acb73973",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-25T00%3A00%3A00Z&publishDateTimeTo=2026-01-26T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:12.884028Z"
+    },
+    {
+      "content_hash": "f5198688e19046705d4f66516f1374f8200830f2599d166b655283d102b7e3f1",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-26T00%3A00%3A00Z&publishDateTimeTo=2026-01-27T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:13.347083Z"
+    },
+    {
+      "content_hash": "392a9f801793119c7fef3085f0f9bd63d7e9d0d297f0d006c49c0ce67f2d0709",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-27T00%3A00%3A00Z&publishDateTimeTo=2026-01-28T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:13.663202Z"
+    },
+    {
+      "content_hash": "577f83ba066bbc077b82a8bef626919575b255f7700c333214f61d14240812c7",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-28T00%3A00%3A00Z&publishDateTimeTo=2026-01-29T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:13.967033Z"
+    },
+    {
+      "content_hash": "91e2f9a91c1b93e418562df2cce59a3961e547c9f985d534bd2f72f8c94b1d4b",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-29T00%3A00%3A00Z&publishDateTimeTo=2026-01-30T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:14.278418Z"
+    },
+    {
+      "content_hash": "88566e34fa709ddf2706f6e783cae11f492d7eeac327b5b73a8833b220b85c1e",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-30T00%3A00%3A00Z&publishDateTimeTo=2026-01-31T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:14.590575Z"
+    },
+    {
+      "content_hash": "e69da535c624cecc4a6a3392a23db40ec211f1b6ffcef98e5742a861cf03c650",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream?publishDateTimeFrom=2026-01-31T00%3A00%3A00Z&publishDateTimeTo=2026-02-01T00%3A00%3A00Z",
+      "retrieved_at": "2026-10-26T14:20:14.896202Z"
+    },
+    {
+      "content_hash": "8c8a430566cf844b0db55202e8f1b8ad74f06053685cb1d2b5d678bb6af01d0e",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-02&settlementDateTo=2026-01-02",
+      "retrieved_at": "2026-10-26T14:20:15.168526Z"
+    },
+    {
+      "content_hash": "4b603000b3062882c1571ebd709f29141de246d3959da522c7773e05327b9e51",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-03&settlementDateTo=2026-01-03",
+      "retrieved_at": "2026-10-26T14:20:15.367742Z"
+    },
+    {
+      "content_hash": "4256a17ec229e8fb98e6da887b8eb7561ef1ba19def6a51f384c3565ab55d462",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-04&settlementDateTo=2026-01-04",
+      "retrieved_at": "2026-10-26T14:20:15.575550Z"
+    },
+    {
+      "content_hash": "9a575119b8b0b91873dcb9268f10a14718114e3b49d17d715ec51bd1fad04422",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-05&settlementDateTo=2026-01-05",
+      "retrieved_at": "2026-10-26T14:20:15.831540Z"
+    },
+    {
+      "content_hash": "304f609366e42241a22697f991f71980e3ee0dd0c914b9d4bc1689fb5525d609",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-06&settlementDateTo=2026-01-06",
+      "retrieved_at": "2026-10-26T14:20:16.478318Z"
+    },
+    {
+      "content_hash": "f48fe8e9b401bad8551c7f9a5cab83bf40dfdaaad5ef4c63c0618f0c7b88e709",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-07&settlementDateTo=2026-01-07",
+      "retrieved_at": "2026-10-26T14:20:16.687028Z"
+    },
+    {
+      "content_hash": "548e52d79d28fee2974f34c1fe6ed7b6d8ce9c2dac2c505f994ecf18f6c15116",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-08&settlementDateTo=2026-01-08",
+      "retrieved_at": "2026-10-26T14:20:16.889995Z"
+    },
+    {
+      "content_hash": "a399c40efd9a220405694361ce3dd467d2e2f063e1b67d027e6c2be7bb13f2f5",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-09&settlementDateTo=2026-01-09",
+      "retrieved_at": "2026-10-26T14:20:17.099167Z"
+    },
+    {
+      "content_hash": "8ca84386f5ab4671455dbc929a4a7e424b4a3901065a5df5869c6b2e903c17d6",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-10&settlementDateTo=2026-01-10",
+      "retrieved_at": "2026-10-26T14:20:17.319099Z"
+    },
+    {
+      "content_hash": "3c12151071c216e7775b3ca2a5f620b2c3966137694cfd4ff7c9aa8d71bd4db6",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-11&settlementDateTo=2026-01-11",
+      "retrieved_at": "2026-10-26T14:20:17.530368Z"
+    },
+    {
+      "content_hash": "bed49964125160d8993e67e133cee4c2377ca2523a483ef22c473526ee16de70",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-12&settlementDateTo=2026-01-12",
+      "retrieved_at": "2026-10-26T14:20:17.746968Z"
+    },
+    {
+      "content_hash": "1ac8d005f3ad346641cd98db2a0a02ea52ed7b841c4e48ad7fba5333f39dcaf0",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-13&settlementDateTo=2026-01-13",
+      "retrieved_at": "2026-10-26T14:20:18.074340Z"
+    },
+    {
+      "content_hash": "3ac0133e0e75c934816993bb3f1a97ac44acbdc5022575e8394fcb025b687b8f",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-14&settlementDateTo=2026-01-14",
+      "retrieved_at": "2026-10-26T14:20:18.264448Z"
+    },
+    {
+      "content_hash": "7b751c69732a5cb83e5c4e66806d95980509931444bf02c09f2ee705a8772f6d",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-15&settlementDateTo=2026-01-15",
+      "retrieved_at": "2026-10-26T14:20:18.462210Z"
+    },
+    {
+      "content_hash": "ee982bb08bf66a8559da94a573ecf3e8e368ab02d8397d2912afea6a5cac7e64",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-16&settlementDateTo=2026-01-16",
+      "retrieved_at": "2026-10-26T14:20:19.273437Z"
+    },
+    {
+      "content_hash": "58a678df49e3e280363800f40e9668669028e8367b3cb27f8ac197e7d64bdad2",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-17&settlementDateTo=2026-01-17",
+      "retrieved_at": "2026-10-26T14:20:19.473163Z"
+    },
+    {
+      "content_hash": "8330f5a62786f5dd7642943d08c8e50bc8e8a653f4b801418b31d55a8ac9884a",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-18&settlementDateTo=2026-01-18",
+      "retrieved_at": "2026-10-26T14:20:19.682731Z"
+    },
+    {
+      "content_hash": "fecde350099a25227dd800134fc084b985f091805847f43f6dfbca834b0641bb",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-19&settlementDateTo=2026-01-19",
+      "retrieved_at": "2026-10-26T14:20:19.891866Z"
+    },
+    {
+      "content_hash": "f935c0f14464c066d367975d04f17c0303e051d0907ba8dc4df825b9c315c037",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-20&settlementDateTo=2026-01-20",
+      "retrieved_at": "2026-10-26T14:20:20.098445Z"
+    },
+    {
+      "content_hash": "a8adf547f637ed587460f61b0662d11391425b550b03694cacd6aabbc2b513be",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-21&settlementDateTo=2026-01-21",
+      "retrieved_at": "2026-10-26T14:20:20.303390Z"
+    },
+    {
+      "content_hash": "b558a4062dae504f64fdbdc13c9514276ac5676892bb8e24906489d93541459c",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-22&settlementDateTo=2026-01-22",
+      "retrieved_at": "2026-10-26T14:20:20.530334Z"
+    },
+    {
+      "content_hash": "655f8251cd36c82c239685e0de8a34f8f13a271b2da712d8b7ba5be02cddb3ec",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-23&settlementDateTo=2026-01-23",
+      "retrieved_at": "2026-10-26T14:20:20.737635Z"
+    },
+    {
+      "content_hash": "b0cc9945f7b5f7eb2a40b9402c28cbd771618d14d2fbd6145b6b66735e9dc932",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-24&settlementDateTo=2026-01-24",
+      "retrieved_at": "2026-10-26T14:20:20.944541Z"
+    },
+    {
+      "content_hash": "cdcc885ca77223e7b3d611abcb89c66b2004351525a6169a4524ae709c00ca61",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-25&settlementDateTo=2026-01-25",
+      "retrieved_at": "2026-10-26T14:20:21.150406Z"
+    },
+    {
+      "content_hash": "b2123c456ec291848b595f3efc0fd9b12d9abc0e127273ae62c6ab67aeeac7db",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-26&settlementDateTo=2026-01-26",
+      "retrieved_at": "2026-10-26T14:20:21.777219Z"
+    },
+    {
+      "content_hash": "77ec3897fd7b4c0e1bbda97a18eb0b7ee780cc3efa98eee0f4d9c0ed842461a7",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-27&settlementDateTo=2026-01-27",
+      "retrieved_at": "2026-10-26T14:20:21.982822Z"
+    },
+    {
+      "content_hash": "1115d6d9b7d9a304e7d24cdec42c8b68783fd8aa53cb7be27d215be3b170c67b",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-28&settlementDateTo=2026-01-28",
+      "retrieved_at": "2026-10-26T14:20:22.188437Z"
+    },
+    {
+      "content_hash": "93ffe9770b1ab141f25753daf391e346c93e8ebf028014b84dc860face697a8f",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-29&settlementDateTo=2026-01-29",
+      "retrieved_at": "2026-10-26T14:20:22.401703Z"
+    },
+    {
+      "content_hash": "a4b29997f665ea700ec04e5e559f5d24233ca3cc9b77e38d679199f2240c6eb7",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-30&settlementDateTo=2026-01-30",
+      "retrieved_at": "2026-10-26T14:20:22.597264Z"
+    },
+    {
+      "content_hash": "b7fc3a58ba6397ff8aea45ab462146a2eb634b27e80219d0c4286a6281f86427",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-01-31&settlementDateTo=2026-01-31",
+      "retrieved_at": "2026-10-26T14:20:22.803340Z"
+    },
+    {
+      "content_hash": "15e5f5dcb2e3233e40a5dd964f1c99672f8a0a7a640d73fce8652124869984be",
+      "http_status": 200,
+      "request_url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?fuelType=WIND&settlementDateFrom=2026-02-01&settlementDateTo=2026-02-01",
+      "retrieved_at": "2026-10-26T14:20:23.014875Z"
+    }
+  ],
+  "snapshot": {
+    "bounds": {
+      "decision_from": "2026-01-01",
+      "decision_to": "2026-01-31",
+      "delivery_from": "2026-01-02",
+      "delivery_to": "2026-02-01",
+      "forecast_publish_from": "2025-12-25T00:00:00.000000Z",
+      "forecast_publish_to": "2026-02-01T00:00:00.000000Z"
+    },
+    "counts": {
+      "completed_windows": 69,
+      "conflicting_keys": 0,
+      "expected_actual_targets": 1488,
+      "expected_forecast_targets": 744,
+      "filtered_outside_target_scope": 4328,
+      "missing_actual_targets": 0,
+      "missing_forecast_targets": 0,
+      "observed_actual_targets": 1488,
+      "observed_count": 23680,
+      "observed_forecast_targets": 744,
+      "semantic_observations": 19352,
+      "valid_count": 23680,
+      "valid_scoped_observations": 19352
+    },
+    "created_at": "2026-10-26T14:22:43.950706Z",
+    "id": "9e2b992d3cb943aa9a82d4c3e71fd68f",
+    "input_hash": "dfebf7e8895557c162096eb06e3cf1fcf17971e5dbd29974290310de231bb94d",
+    "manifest_hash": "d32cb22c015e118aa4beb4bed94eaef6443c82ace432d698aed39c6b7f63b226",
+    "manifest_path": "snapshots/9e2b992d3cb943aa9a82d4c3e71fd68f.json",
+    "policies": {
+      "actual": "latest_in_snapshot_v1",
+      "alignment": "timestamp_matched_halfhour_reference_v1",
+      "metric": "pooled_errors_v1",
+      "selection": "asof_per_target_v1"
+    },
+    "retrieved_at": "2026-10-26T14:20:23.014875Z",
+    "source_mode": "live",
+    "status": "succeeded"
+  },
+  "window_outcomes": [
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-13T00:00:00Z",
+        "publishDateTimeTo": "2026-01-14T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-10",
+        "settlementDateTo": "2026-01-10"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-08",
+        "settlementDateTo": "2026-01-08"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-06",
+        "settlementDateTo": "2026-01-06"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-11",
+        "settlementDateTo": "2026-01-11"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-05",
+        "settlementDateTo": "2026-01-05"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-07T00:00:00Z",
+        "publishDateTimeTo": "2026-01-08T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-20",
+        "settlementDateTo": "2026-01-20"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-28",
+        "settlementDateTo": "2026-01-28"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2025-12-30T00:00:00Z",
+        "publishDateTimeTo": "2025-12-31T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-16T00:00:00Z",
+        "publishDateTimeTo": "2026-01-17T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2025-12-25T00:00:00Z",
+        "publishDateTimeTo": "2025-12-26T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-10T00:00:00Z",
+        "publishDateTimeTo": "2026-01-11T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-09T00:00:00Z",
+        "publishDateTimeTo": "2026-01-10T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2025-12-31T00:00:00Z",
+        "publishDateTimeTo": "2026-01-01T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-19T00:00:00Z",
+        "publishDateTimeTo": "2026-01-20T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-22",
+        "settlementDateTo": "2026-01-22"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-24",
+        "settlementDateTo": "2026-01-24"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-30T00:00:00Z",
+        "publishDateTimeTo": "2026-01-31T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-13",
+        "settlementDateTo": "2026-01-13"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-22T00:00:00Z",
+        "publishDateTimeTo": "2026-01-23T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-04",
+        "settlementDateTo": "2026-01-04"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-17",
+        "settlementDateTo": "2026-01-17"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2025-12-28T00:00:00Z",
+        "publishDateTimeTo": "2025-12-29T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-30",
+        "settlementDateTo": "2026-01-30"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-21T00:00:00Z",
+        "publishDateTimeTo": "2026-01-22T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-11T00:00:00Z",
+        "publishDateTimeTo": "2026-01-12T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-23",
+        "settlementDateTo": "2026-01-23"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-31T00:00:00Z",
+        "publishDateTimeTo": "2026-02-01T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-27T00:00:00Z",
+        "publishDateTimeTo": "2026-01-28T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-03",
+        "settlementDateTo": "2026-01-03"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-31",
+        "settlementDateTo": "2026-01-31"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-20T00:00:00Z",
+        "publishDateTimeTo": "2026-01-21T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-27",
+        "settlementDateTo": "2026-01-27"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-25",
+        "settlementDateTo": "2026-01-25"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-21",
+        "settlementDateTo": "2026-01-21"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-16",
+        "settlementDateTo": "2026-01-16"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-18",
+        "settlementDateTo": "2026-01-18"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-26T00:00:00Z",
+        "publishDateTimeTo": "2026-01-27T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-04T00:00:00Z",
+        "publishDateTimeTo": "2026-01-05T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-15T00:00:00Z",
+        "publishDateTimeTo": "2026-01-16T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-02-01",
+        "settlementDateTo": "2026-02-01"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-29T00:00:00Z",
+        "publishDateTimeTo": "2026-01-30T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-14",
+        "settlementDateTo": "2026-01-14"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-05T00:00:00Z",
+        "publishDateTimeTo": "2026-01-06T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-07",
+        "settlementDateTo": "2026-01-07"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-09",
+        "settlementDateTo": "2026-01-09"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-01T00:00:00Z",
+        "publishDateTimeTo": "2026-01-02T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-15",
+        "settlementDateTo": "2026-01-15"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-29",
+        "settlementDateTo": "2026-01-29"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-02T00:00:00Z",
+        "publishDateTimeTo": "2026-01-03T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-23T00:00:00Z",
+        "publishDateTimeTo": "2026-01-24T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-08T00:00:00Z",
+        "publishDateTimeTo": "2026-01-09T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-17T00:00:00Z",
+        "publishDateTimeTo": "2026-01-18T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-28T00:00:00Z",
+        "publishDateTimeTo": "2026-01-29T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-26",
+        "settlementDateTo": "2026-01-26"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-12T00:00:00Z",
+        "publishDateTimeTo": "2026-01-13T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-03T00:00:00Z",
+        "publishDateTimeTo": "2026-01-04T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-12",
+        "settlementDateTo": "2026-01-12"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2025-12-29T00:00:00Z",
+        "publishDateTimeTo": "2025-12-30T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-02",
+        "settlementDateTo": "2026-01-02"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-25T00:00:00Z",
+        "publishDateTimeTo": "2026-01-26T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2025-12-26T00:00:00Z",
+        "publishDateTimeTo": "2025-12-27T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-18T00:00:00Z",
+        "publishDateTimeTo": "2026-01-19T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2025-12-27T00:00:00Z",
+        "publishDateTimeTo": "2025-12-28T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-06T00:00:00Z",
+        "publishDateTimeTo": "2026-01-07T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-14T00:00:00Z",
+        "publishDateTimeTo": "2026-01-15T00:00:00Z"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "FUELHH",
+      "error_code": null,
+      "parameters": {
+        "fuelType": "WIND",
+        "settlementDateFrom": "2026-01-19",
+        "settlementDateTo": "2026-01-19"
+      },
+      "status": "succeeded"
+    },
+    {
+      "dataset": "WINDFOR",
+      "error_code": null,
+      "parameters": {
+        "publishDateTimeFrom": "2026-01-24T00:00:00Z",
+        "publishDateTimeTo": "2026-01-25T00:00:00Z"
+      },
+      "status": "succeeded"
+    }
+  ]
+}

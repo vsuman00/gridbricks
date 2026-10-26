@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GridBricks | UI mockup for review</title>
+  <style>
+    :root { --ink:#18313e; --muted:#586b76; --teal:#116d70; --teal-soft:#e9f3f1; --line:#dce4e7; --paper:#f3f6f7; --white:#fff; --amber:#8b5319; --amber-soft:#fff5e8; --red:#a33e3e; --radius:12px; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    button,input,select { font:inherit; }
+    button,a,input,select,summary { -webkit-tap-highlight-color:transparent; }
+    button,a { touch-action:manipulation; }
+    button { cursor:pointer; }
+    button:disabled { cursor:not-allowed; opacity:.55; }
+    :focus-visible { outline:3px solid #19898f; outline-offset:3px; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    svg { display:block; }
+    .icon { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+    .skip { position:fixed; top:-60px; left:12px; z-index:10; padding:10px 16px; background:white; }
+    .skip:focus { top:12px; }
+    .review-bar { min-height:48px; padding:9px 24px; background:#19333e; color:#fff; display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:12px; }
+    .review-title { display:flex; align-items:center; gap:12px; }
+    .draft { border:1px solid #779198; border-radius:4px; padding:2px 7px; font-size:10px; font-weight:700; letter-spacing:.09em; }
+    .review-note { color:#cbd9de; }
+    .review-controls { display:flex; align-items:center; gap:9px; white-space:nowrap; }
+    .review-controls select { border:1px solid #72858e; border-radius:5px; color:white; background:#284550; padding:5px 24px 5px 8px; font-size:12px; }
+    .shell { display:grid; grid-template-columns:198px minmax(0,1fr); min-height:calc(100vh - 48px); }
+    .sidebar { background:var(--white); border-right:1px solid var(--line); padding:27px 16px 20px; display:flex; flex-direction:column; gap:31px; }
+    .brand { display:flex; align-items:center; gap:10px; padding:0 9px; font-size:18px; font-weight:750; letter-spacing:-.6px; }
+    .brand-mark { display:grid; grid-template-columns:repeat(2,7px); gap:3px; padding:9px; border:1px solid #d4e6e3; border-radius:9px; background:#f1f8f6; }
+    .brand-mark i { height:7px; width:7px; background:var(--teal); border-radius:1px; }
+    .brand-mark i:last-child { background:#91b7b0; }
+    .workspace-label { padding:0 12px; margin-bottom:11px; color:var(--muted); font-size:10px; font-weight:700; letter-spacing:.11em; text-transform:uppercase; }
+    nav { display:grid; gap:6px; }
+    .nav-button { width:100%; display:flex; align-items:center; gap:11px; padding:12px; border:0; border-radius:7px; color:#5d6f79; background:transparent; text-align:left; font-size:13px; font-weight:600; }
+    .nav-button[aria-current=page] { background:var(--teal-soft); color:#0c6264; }
+    .nav-button:hover { background:#f0f5f5; }
+    .sidebar-footer { margin-top:auto; border-top:1px solid var(--line); padding:20px 11px 0; }
+    .sidebar-footer strong { display:block; font-size:12px; font-weight:600; }
+    .sidebar-footer p { margin:4px 0 12px; font-size:11px; color:var(--muted); }
+    .text-button { border:0; background:none; color:var(--teal); padding:0; font-size:12px; font-weight:600; display:inline-flex; align-items:center; gap:6px; }
+    .content { min-width:0; }
+    .topbar { height:64px; padding:0 34px; display:flex; align-items:center; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); background:rgba(255,255,255,.65); }
+    .crumb { color:var(--muted); font-size:12px; }
+    .crumb span { padding:0 10px; color:#a1afb6; }
+    .badge { display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600; padding:4px 9px; border:1px solid var(--line); background:white; border-radius:5px; white-space:nowrap; }
+    .badge .icon { width:13px; height:13px; }
+    main { max-width:1490px; margin:0 auto; padding:30px 34px; }
+    .page-heading { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:24px; }
+    h1 { margin:0 0 4px; font-size:29px; font-weight:650; line-height:1.3; letter-spacing:-.9px; }
+    .subtitle { color:var(--muted); margin:0; font-size:13px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:39px; padding:9px 14px; border:1px solid #cbd7dc; border-radius:7px; color:var(--ink); background:white; font-size:12px; font-weight:600; white-space:nowrap; }
+    .button.primary { color:white; background:var(--teal); border-color:var(--teal); }
+    .button .icon { width:16px; height:16px; }
+    .filter-panel { display:flex; gap:18px; align-items:flex-end; padding:19px 22px; background:white; border:1px solid var(--line); border-radius:var(--radius); }
+    .field { display:grid; gap:6px; min-width:140px; }
+    .field label,.field-label { font-size:11px; color:var(--muted); font-weight:600; }
+    input { width:100%; min-height:39px; border:1px solid #cbd7dc; padding:7px 10px; border-radius:6px; color:var(--ink); background:#fff; font-variant-numeric:tabular-nums; }
+    .field.cutoff { min-width:116px; width:130px; }
+    .delivery-field { margin-left:3px; padding-left:23px; border-left:1px solid var(--line); display:grid; gap:7px; align-self:center; }
+    .delivery-field strong { font-size:13px; font-weight:650; white-space:nowrap; }
+    .filter-action { margin-left:auto; }
+    .scope-note { display:flex; justify-content:space-between; gap:16px; margin:10px 2px 21px; color:var(--muted); font-size:11px; }
+    .scope-note span { display:inline-flex; gap:5px; align-items:center; }
+    .scope-note .icon { width:13px; height:13px; }
+    .metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; margin-bottom:20px; }
+    .metric { border:1px solid var(--line); background:white; border-radius:var(--radius); padding:17px 21px; }
+    .metric-name { font-size:11px; font-weight:600; color:var(--muted); display:flex; align-items:center; gap:6px; }
+    .metric-value { font-variant-numeric:tabular-nums; font-size:27px; line-height:1.4; letter-spacing:-.5px; margin-top:7px; }
+    .metric-value small { color:var(--muted); font-size:12px; letter-spacing:0; }
+    .metric-foot { font-size:10px; color:var(--muted); margin-top:3px; }
+    .main-grid { display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:19px; align-items:start; }
+    .card { border:1px solid var(--line); background:white; border-radius:var(--radius); overflow:hidden; }
+    .card-heading { padding:20px 22px 0; display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
+    h2 { font-size:14px; font-weight:650; margin:0; letter-spacing:-.15px; }
+    .card-subtitle { margin:4px 0 0; color:var(--muted); font-size:11px; }
+    .legend { display:flex; gap:14px; color:var(--muted); font-size:10px; padding-top:3px; }
+    .legend span { display:flex; align-items:center; gap:5px; white-space:nowrap; }
+    .legend .accuracy-only { display:none; }
+    .swatch { width:15px; height:3px; border-radius:2px; background:var(--teal); }
+    .swatch.actual { background:#6d7d8c; }
+    .chart-area { position:relative; padding:18px 19px 0; min-height:258px; }
+    .chart-area > svg.plot { width:100%; height:auto; overflow:visible; }
+    .chart-caption { display:flex; justify-content:space-between; gap:10px; padding:0 22px 17px; color:var(--muted); font-size:10px; }
+    .chart-footer { border-top:1px solid #e8edef; padding:12px 22px; display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:11px; background:#fcfdfd; }
+    .chart-footer span { display:inline-flex; align-items:center; gap:6px; color:var(--muted); }
+    .chart-footer .icon { width:14px; height:14px; }
+    .chart-footer a { font-weight:600; text-decoration:none; }
+    .sidecard { padding:19px; }
+    .sidecard .eyebrow { font-size:10px; color:var(--muted); font-weight:650; letter-spacing:.08em; text-transform:uppercase; margin-bottom:11px; }
+    .sidecard h2 { font-size:15px; }
+    .sidecard p { color:var(--muted); font-size:11px; line-height:1.7; margin:9px 0 17px; }
+    .metadata { margin:0; }
+    .metadata div { display:flex; justify-content:space-between; gap:9px; padding:10px 0; border-bottom:1px solid #edf1f2; font-size:11px; }
+    .metadata div:last-child { border-bottom:0; }
+    .metadata dt { color:var(--muted); }
+    .metadata dd { margin:0; text-align:right; font-weight:600; font-variant-numeric:tabular-nums; }
+    .aside-note { background:#eef5f4; border:1px solid #d7e7e3; border-radius:8px; padding:12px; margin-top:16px; color:#305c59; font-size:11px; line-height:1.6; }
+    .aside-note strong { display:block; margin-bottom:4px; font-weight:650; }
+    .quality-banner { display:none; align-items:flex-start; gap:9px; border:1px solid #e7cfaf; background:var(--amber-soft); padding:12px 16px; border-radius:8px; margin-bottom:18px; color:var(--amber); font-size:12px; }
+    .quality-banner .icon { width:17px; height:17px; margin-top:1px; }
+    .table-card { margin-top:20px; }
+    .table-header { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:17px 22px; border-bottom:1px solid var(--line); }
+    .table-header span { font-size:10px; color:var(--muted); }
+    .table-wrap { overflow:auto; }
+    table { width:100%; border-collapse:collapse; white-space:nowrap; font-size:11px; text-align:left; }
+    th { background:#f8fafb; padding:11px 21px; color:var(--muted); font-size:10px; font-weight:600; border-bottom:1px solid var(--line); }
+    td { padding:12px 21px; border-bottom:1px solid #edf1f2; font-variant-numeric:tabular-nums; }
+    tr:last-child td { border-bottom:0; }
+    .num { text-align:right; }
+    .placeholder { color:#71838b; }
+    .row-state { display:inline-flex; align-items:center; gap:5px; color:#647781; font-size:10px; }
+    .row-state:before { content:""; width:5px; height:5px; border-radius:50%; background:#a5b4ba; }
+    .row-state.missing { color:var(--amber); }
+    .row-state.missing:before { background:#ad7438; }
+    .table-bottom { border-top:1px solid var(--line); padding:11px 22px; color:var(--muted); font-size:10px; display:flex; justify-content:space-between; gap:12px; }
+    .page-footer { display:flex; justify-content:space-between; gap:15px; color:var(--muted); font-size:10px; margin-top:20px; }
+    .small-separator { color:#bbc6cb; padding:0 6px; }
+    [hidden] { display:none !important; }
+    .accuracy-only { display:none; }
+    .coverage-strip { border:1px solid var(--line); border-radius:8px; background:white; padding:11px 17px; margin:-5px 0 20px; color:var(--muted); font-size:11px; gap:24px; flex-wrap:wrap; }
+    .coverage-strip b { color:var(--ink); margin-left:5px; font-variant-numeric:tabular-nums; }
+    body[data-view=accuracy] .accuracy-only { display:initial; }
+    body[data-view=accuracy] .coverage-strip { display:flex; }
+    body[data-view=accuracy] .decision-only { display:none !important; }
+    body[data-view=accuracy] .metric.accuracy-only { display:block; }
+    body[data-view=accuracy] .field.accuracy-only { display:grid; }
+    body[data-view=accuracy] .sidecard.accuracy-only { display:block; }
+    body[data-view=accuracy] .legend .accuracy-only { display:flex; }
+    body[data-view=accuracy] th.accuracy-only,body[data-view=accuracy] td.accuracy-only { display:table-cell; }
+    .state-message { display:none; position:absolute; inset:18px 20px 12px; align-items:center; justify-content:center; flex-direction:column; text-align:center; background:#fff; border:1px dashed #d5dfe3; border-radius:7px; padding:24px; }
+    .state-message .state-icon { padding:12px; border:1px solid #e0e9eb; background:#f5f8f8; border-radius:12px; margin-bottom:12px; }
+    .state-message strong { font-size:14px; font-weight:650; }
+    .state-message p { color:var(--muted); font-size:12px; max-width:340px; margin:8px 0 0; }
+    body[data-state=empty] .state-message,body[data-state=error] .state-message,body[data-state=alignment][data-view=accuracy] .state-message { display:flex; }
+    body[data-state=empty] .plot,body[data-state=error] .plot,body[data-state=alignment][data-view=accuracy] .plot,body[data-state=loading] .plot { visibility:hidden; }
+    .skeleton { position:absolute; inset:35px 25px; display:none; flex-direction:column; justify-content:space-between; }
+    .skeleton div { height:12px; background:#eef2f4; border-radius:4px; }
+    .skeleton div:nth-child(2) { width:85%; }
+    .skeleton div:nth-child(3) { width:92%; }
+    body[data-state=loading] .skeleton { display:flex; }
+    body[data-state=loading] .metric-value { color:transparent; background:#eef2f4; border-radius:5px; width:80px; height:38px; }
+    body[data-state=partial] .quality-banner { display:flex; }
+    body[data-state=alignment][data-view=decision] .quality-banner { display:flex; }
+    body[data-state=partial] .forecast-line,body[data-state=partial] .actual-line { clip-path:url(#gap-mask); }
+    dialog { width:min(520px,calc(100% - 32px)); border:1px solid var(--line); border-radius:14px; padding:27px; color:var(--ink); box-shadow:0 24px 80px #152e3e26; }
+    dialog::backdrop { background:#19333e66; }
+    dialog h2 { font-size:20px; }
+    dialog p { color:var(--muted); font-size:13px; }
+    dialog .button { margin-top:22px; float:right; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media (min-width:1600px) { .chart-area { min-height:320px; } }
+    @media (max-width:1190px) { .shell { grid-template-columns:170px minmax(0,1fr); } main { padding:25px 23px; } .topbar { padding:0 23px; } .main-grid { grid-template-columns:minmax(0,1fr) 225px; gap:15px; } .filter-panel { gap:12px; padding:17px; flex-wrap:wrap; } .delivery-field { padding-left:16px; } .field { min-width:130px; } .card-heading { padding-left:17px; padding-right:17px; } .chart-area { min-height:220px; } }
+    @media (max-width:960px) { .main-grid { grid-template-columns:1fr; } .sidecard { display:none; } body[data-view=accuracy] .sidecard.accuracy-only { display:none; } .sidebar { padding-left:10px; padding-right:10px; } .filter-action { margin-left:0; } .chart-area { min-height:250px; } .review-note { display:none; } }
+    @media (max-width:680px) { .review-bar { padding:10px 15px; flex-wrap:wrap; gap:8px; } .review-title { gap:8px; } .shell { display:block; } .sidebar { padding:13px 16px; border-right:0; border-bottom:1px solid var(--line); gap:15px; } .brand { font-size:17px; padding:0; } .brand-mark { padding:6px; } .workspace-label,.sidebar-footer { display:none; } nav { display:flex; gap:7px; } .nav-button { width:auto; padding:9px 12px; flex:1; justify-content:center; } .topbar { height:47px; padding:0 17px; } main { padding:23px 16px; } h1 { font-size:25px; } .page-heading { align-items:flex-start; gap:10px; margin-bottom:19px; } .subtitle { font-size:12px; } .page-heading .button { padding:8px; min-width:36px; } .export-label { display:none; } .filter-panel { gap:13px; padding:15px; display:grid; grid-template-columns:1fr 1fr; } .field,.field.cutoff { min-width:0; width:auto; } .delivery-field { border:0; padding:0; margin:0; } .filter-action { align-self:end; } .scope-note { flex-wrap:wrap; gap:5px; font-size:10px; } .metrics { gap:8px; } .metric { padding:12px 10px; border-radius:8px; } .metric-name { font-size:10px; min-height:30px; align-items:flex-start; } .metric-value { font-size:22px; } .metric-foot { font-size:9px; } .card-heading { padding:17px 16px 0; flex-wrap:wrap; } .legend { font-size:9px; } .chart-area { padding:19px 9px 0; min-height:210px; } .chart-area > svg.plot { min-height:185px; } .chart-caption { padding:0 16px 13px; font-size:9px; } .chart-footer { padding:11px 16px; font-size:10px; } .chart-footer span { max-width:230px; } .table-header { padding:15px; } .table-header span { display:none; } th,td { padding-left:15px; padding-right:15px; } .table-bottom { padding:11px 15px; flex-wrap:wrap; } .page-footer { flex-wrap:wrap; gap:6px; } }
+    @media (prefers-reduced-motion:reduce) { *,*:before,*:after { scroll-behavior:auto !important; } }
+  </style>
+</head>
+<body data-view="decision" data-state="preview">
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16M7 14l4-4 4 2 5-7"/></symbol>
+    <symbol id="i-accuracy" viewBox="0 0 24 24"><path d="M4 12h16M6 7v10M12 4v16M18 8v8"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-warning" viewBox="0 0 24 24"><path d="m12 3 10 18H2L12 3ZM12 9v5M12 17h.01"/></symbol>
+    <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></symbol>
+  </defs></svg>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="review-bar" aria-label="Design review tools">
+    <div class="review-title"><span class="draft">DRAFT 01</span><strong>UI mockup for approval</strong><span class="review-note">Illustrative curves. No data connected.</span></div>
+    <div class="review-controls"><label for="preview-state">Preview state</label><select id="preview-state"><option value="preview">Layout preview</option><option value="partial">Partial data</option><option value="empty">Empty</option><option value="loading">Loading</option><option value="error">Data unavailable</option><option value="alignment">Alignment pending</option></select></div>
+  </div>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>GridBricks</div>
+      <div><div class="workspace-label">Wind intelligence</div><nav aria-label="Main views">
+        <button class="nav-button" id="decision-nav" aria-current="page" data-view-button="decision"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>Decision view</button>
+        <button class="nav-button" id="accuracy-nav" data-view-button="accuracy"><svg class="icon" aria-hidden="true"><use href="#i-accuracy"/></svg>Accuracy</button>
+      </nav></div>
+      <div class="sidebar-footer"><strong>January 2026</strong><p>Historical decision workspace</p><button class="text-button" data-open-details><svg class="icon" aria-hidden="true"><use href="#i-data"/></svg>Data details</button></div>
+    </aside>
+    <div class="content">
+      <header class="topbar"><div class="crumb">Workspace<span>/</span><b id="crumb-view">Decision view</b></div><span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Historical replay</span></header>
+      <main id="main">
+        <div class="page-heading"><div><h1 id="page-title">Wind outlook</h1><p class="subtitle" id="page-subtitle">The forecast available before your day-ahead buying deadline.</p></div><button class="button" disabled title="Export becomes available when data is connected"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><span class="export-label">Export CSV</span></button></div>
+        <form id="filters" class="filter-panel" aria-label="Historical decision filters">
+          <div class="field"><label for="decision-date" id="date-label">Decision date</label><input type="date" id="decision-date" min="2026-01-01" max="2026-01-31" value="2026-01-15" required></div>
+          <div class="field accuracy-only"><label for="decision-end">Decision to</label><input type="date" id="decision-end" min="2026-01-01" max="2026-01-31" value="2026-01-31" required></div>
+          <div class="field cutoff"><label for="cutoff">Buying cutoff · UK time</label><input type="time" id="cutoff" value="09:30" required></div>
+          <div class="delivery-field"><span class="field-label" id="delivery-label">Delivery day</span><strong id="delivery-value">16 Jan 2026</strong></div>
+          <button class="button primary filter-action" type="submit">Apply to preview<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </form>
+        <div class="scope-note"><span><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>09:30 is a configurable demo assumption.</span><span>All displayed times: Europe/London</span></div>
+        <div class="quality-banner" role="status"><svg class="icon" aria-hidden="true"><use href="#i-warning"/></svg><span id="quality-message">Partial-data state preview. Missing intervals stay visible as gaps and are excluded from matched error calculations.</span></div>
+        <div class="metrics">
+          <section class="metric decision-only"><div class="metric-name">Forecast coverage</div><div class="metric-value">— <small>/ 24 targets</small></div><div class="metric-foot">Expected hourly targets for this day</div></section>
+          <section class="metric decision-only"><div class="metric-name">Oldest selected publication</div><div class="metric-value">—</div><div class="metric-foot">Age measured at the selected cutoff</div></section>
+          <section class="metric decision-only"><div class="metric-name">Unresolved intervals</div><div class="metric-value">—</div><div class="metric-foot">Missing or conflicting forecasts</div></section>
+          <section class="metric accuracy-only"><div class="metric-name">Mean absolute error · MAE</div><div class="metric-value">— <small>MW</small></div><div class="metric-foot">Typical absolute forecast miss</div></section>
+          <section class="metric accuracy-only"><div class="metric-name">Root mean square error · RMSE</div><div class="metric-value">— <small>MW</small></div><div class="metric-foot">More sensitive to large misses</div></section>
+          <section class="metric accuracy-only"><div class="metric-name">Mean bias</div><div class="metric-value">— <small>MW</small></div><div class="metric-foot">Positive means wind was overforecast</div></section>
+        </div>
+        <div class="coverage-strip accuracy-only" aria-label="Comparison coverage"><span>Matched intervals <b>— / —</b></span><span>Coverage <b>—</b></span><span>Missing intervals <b>—</b></span></div>
+        <div class="main-grid">
+          <div>
+            <section class="card" aria-labelledby="chart-title">
+              <div class="card-heading"><div><h2 id="chart-title">Next-day wind forecast</h2><p class="card-subtitle" id="chart-subtitle">Delivery profile · 16 January 2026</p></div><div class="legend"><span><i class="swatch"></i>Forecast</span><span class="accuracy-only"><i class="swatch actual"></i>Actual</span></div></div>
+              <div class="chart-area">
+                <svg class="plot" viewBox="0 0 790 265" role="img" aria-labelledby="plot-title plot-description">
+                  <title id="plot-title">Illustrative wind profile layout</title><desc id="plot-description">Schematic chart curves for visual design only. No source data or measured values are shown.</desc>
+                  <defs><linearGradient id="forecast-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#116d70" stop-opacity=".12"/><stop offset="100%" stop-color="#116d70" stop-opacity=".015"/></linearGradient><clipPath id="gap-mask"><rect x="0" y="0" width="370" height="260"/><rect x="445" y="0" width="345" height="260"/></clipPath></defs>
+                  <g stroke="#e8eef0" stroke-width="1"><path d="M37 30H771M37 80H771M37 130H771M37 180H771M37 230H771"/></g>
+                  <g fill="#71818b" font-size="10" font-family="sans-serif"><text x="4" y="15">MW</text><text x="10" y="34">—</text><text x="10" y="84">—</text><text x="10" y="134">—</text><text x="10" y="184">—</text><text x="10" y="234">—</text><text x="38" y="251" data-axis="0">00:00</text><text x="210" y="251" data-axis="1">06:00</text><text x="391" y="251" data-axis="2">12:00</text><text x="571" y="251" data-axis="3">18:00</text><text x="738" y="251" data-axis="4">23:00</text></g>
+                  <g class="forecast-line"><path d="M38 167 C75 166 86 142 112 147 S161 175 190 154 S227 90 264 102 S304 131 335 113 S387 60 418 74 S450 115 482 107 S523 58 557 68 S610 103 637 100 S690 147 717 136 S749 130 771 141 L771 230H38Z" fill="url(#forecast-fill)"/><path d="M38 167 C75 166 86 142 112 147 S161 175 190 154 S227 90 264 102 S304 131 335 113 S387 60 418 74 S450 115 482 107 S523 58 557 68 S610 103 637 100 S690 147 717 136 S749 130 771 141" fill="none" stroke="#116d70" stroke-width="2.6"/></g>
+                  <path class="actual-line accuracy-only" d="M38 180 C75 172 86 160 112 164 S161 155 190 170 S227 113 264 115 S304 106 335 134 S387 92 418 87 S450 130 482 122 S523 78 557 83 S610 82 637 116 S690 124 717 149 S749 146 771 158" fill="none" stroke="#6d7d8c" stroke-width="2" stroke-dasharray="6 4"/>
+                </svg>
+                <div class="state-message" role="status"><div class="state-icon"><svg class="icon" aria-hidden="true"><use href="#i-data"/></svg></div><strong id="state-title">No eligible forecast</strong><p id="state-description">No forecast is available for this decision date and cutoff. Missing values remain empty.</p></div>
+                <div class="skeleton" role="status" aria-label="Loading preview"><div></div><div></div><div></div><div></div></div>
+              </div>
+              <div class="chart-caption"><span>Illustrative curves only · not January results</span><span id="x-axis-label">Delivery time · UK</span></div>
+              <div class="chart-footer"><span><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span id="chart-footnote">Latest eligible publication, selected per interval.</span></span><a href="#intervals">View table ↓</a></div>
+            </section>
+            <section class="card accuracy-only" id="error-preview" style="margin-top:18px;display:none" aria-label="Error chart layout">
+              <div class="card-heading"><div><h2>Forecast error</h2><p class="card-subtitle">Forecast minus actual · positive values mean overforecast wind</p></div><span class="badge">Illustrative</span></div>
+              <svg viewBox="0 0 790 115" style="width:100%;padding:10px 20px 8px" role="img" aria-label="Schematic signed-error bars; not measured values"><line x1="37" y1="54" x2="771" y2="54" stroke="#bbc9ce"/><text x="5" y="58" font-size="10" fill="#71818b">0</text><g fill="#b77448"><rect x="59" y="29" width="21" height="25" rx="2"/><rect x="117" y="37" width="21" height="17" rx="2"/><rect x="233" y="13" width="21" height="41" rx="2"/><rect x="291" y="30" width="21" height="24" rx="2"/><rect x="465" y="23" width="21" height="31" rx="2"/><rect x="523" y="38" width="21" height="16" rx="2"/><rect x="697" y="22" width="21" height="32" rx="2"/></g><g fill="#5c8c95"><rect x="175" y="54" width="21" height="18" rx="2"/><rect x="349" y="54" width="21" height="30" rx="2"/><rect x="407" y="54" width="21" height="16" rx="2"/><rect x="581" y="54" width="21" height="31" rx="2"/><rect x="639" y="54" width="21" height="15" rx="2"/></g></svg>
+            </section>
+          </div>
+          <aside class="card sidecard decision-only"><div class="eyebrow">Decision context</div><h2>Available at your cutoff</h2><p>Each delivery time uses its newest forecast published by the buying deadline.</p><dl class="metadata"><div><dt>Decision date</dt><dd id="context-date">15 Jan 2026</dd></div><div><dt>Buying cutoff</dt><dd id="context-cutoff">09:30 UK</dd></div><div><dt>Forecast source</dt><dd>Elexon WINDFOR</dd></div><div><dt>Dataset</dt><dd>Not connected</dd></div></dl><div class="aside-note"><strong>Publication time matters</strong>A revision published after the cutoff does not belong in this decision view.</div><button class="text-button" style="margin-top:18px" data-open-details>Inspect data details<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></aside>
+          <aside class="card sidecard accuracy-only"><div class="eyebrow">Retrospective review</div><h2>Read the error in context</h2><p>Compare the forecast selected at each day's cutoff with later reported wind outturn.</p><dl class="metadata"><div><dt>Matched intervals</dt><dd>— / —</dd></div><div><dt>Coverage</dt><dd>—</dd></div><div><dt>Missing intervals</dt><dd>—</dd></div><div><dt>Actual source</dt><dd>FUELHH · WIND</dd></div></dl><div class="aside-note"><strong>Comparison policy pending</strong>Interval alignment must be confirmed before measured accuracy is available.</div><button class="text-button" style="margin-top:18px" data-open-details>Inspect data details<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></aside>
+        </div>
+        <section class="card table-card" id="intervals" aria-labelledby="table-title"><div class="table-header"><h2 id="table-title">Delivery intervals</h2><span>Publication provenance stays with each value</span></div><div class="table-wrap"><table><caption class="sr-only">Template rows only. All measured values are placeholders.</caption><thead><tr><th id="first-column">Delivery time · UK</th><th class="num">Forecast · MW</th><th class="accuracy-only num">Actual · MW</th><th class="accuracy-only num">Error · MW</th><th>Published at · UK</th><th>Status</th></tr></thead><tbody><tr><td data-row-label="0">00:00</td><td class="num placeholder">—</td><td class="accuracy-only num placeholder">—</td><td class="accuracy-only num placeholder">—</td><td class="placeholder">—</td><td><span class="row-state">Placeholder</span></td></tr><tr><td data-row-label="1">01:00</td><td class="num placeholder">—</td><td class="accuracy-only num placeholder">—</td><td class="accuracy-only num placeholder">—</td><td class="placeholder">—</td><td><span class="row-state" id="gap-row">Placeholder</span></td></tr><tr><td data-row-label="2">02:00</td><td class="num placeholder">—</td><td class="accuracy-only num placeholder">—</td><td class="accuracy-only num placeholder">—</td><td class="placeholder">—</td><td><span class="row-state">Placeholder</span></td></tr></tbody></table></div><div class="table-bottom"><span id="table-footer-note">Three template rows shown. Full interval table follows the selected day.</span><span>All values are placeholders</span></div></section>
+        <section class="card accuracy-only" id="daily-preview" style="margin-top:18px;display:none"><div class="table-header"><h2>Daily accuracy</h2><span>Aggregated from matched intervals</span></div><div class="table-wrap"><table><thead><tr><th>Decision date</th><th>Delivery date</th><th class="num">MAE · MW</th><th class="num">RMSE · MW</th><th class="num">Bias · MW</th><th>Coverage</th></tr></thead><tbody><tr><td>01 Jan 2026</td><td>02 Jan 2026</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td>— / —</td></tr><tr><td>02 Jan 2026</td><td>03 Jan 2026</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td>— / —</td></tr></tbody></table></div></section>
+        <footer class="page-footer"><span>Elexon wind data<span class="small-separator">/</span>National coverage as defined by the source</span><button class="text-button" data-open-details>Sources &amp; methodology</button></footer>
+        <p id="preview-announcement" class="sr-only" aria-live="polite"></p>
+      </main>
+    </div>
+  </div>
+  <dialog id="data-dialog" aria-labelledby="dialog-title"><h2 id="dialog-title">Data details</h2><p>This is a UI design preview. No dataset, forecast score, or source connection is active.</p><dl class="metadata"><div><dt>Forecast input</dt><dd>WINDFOR</dd></div><div><dt>Actual input</dt><dd>FUELHH · WIND</dd></div><div><dt>Snapshot</dt><dd>Not connected</dd></div><div><dt>Retrieved at</dt><dd>—</dd></div><div><dt>Last import outcome</dt><dd>Not run</dd></div><div><dt>Alignment policy</dt><dd>Pending source validation</dd></div></dl><p>The product will expose publication provenance, coverage, and missing-data reasons here. These controls demonstrate the proposed hierarchy only.</p><form method="dialog"><button class="button">Close</button></form></dialog>
+  <script>
+    // Standalone design prototype. No API calls, metrics, storage, or product code.
+    const $ = id => document.getElementById(id);
+    const fmt = value => new Intl.DateTimeFormat('en-GB',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(value+'T12:00:00Z'));
+    const nextDay = value => { const d=new Date(value+'T12:00:00Z'); d.setUTCDate(d.getUTCDate()+1); return d.toISOString().slice(0,10); };
+    function updateFilters() {
+      const accuracy=document.body.dataset.view==='accuracy';
+      const start=$('decision-date').value, end=$('decision-end').value;
+      $('decision-end').setCustomValidity(accuracy && end<start ? 'Choose an end date on or after the start date.' : '');
+      if (!$('filters').reportValidity()) return;
+      $('delivery-value').textContent=accuracy ? fmt(nextDay(start))+' – '+fmt(nextDay(end)) : fmt(nextDay(start));
+      $('context-date').textContent=fmt(start); $('context-cutoff').textContent=$('cutoff').value+' UK';
+      $('chart-subtitle').textContent=accuracy ? 'Delivery period · '+fmt(nextDay(start))+' to '+fmt(nextDay(end)) : 'Delivery profile · '+fmt(nextDay(start));
+      const gridStart=nextDay(start), gridEnd=nextDay(end);
+      document.querySelectorAll('[data-axis]').forEach((node,index)=>{ node.textContent=accuracy ? (index===0 ? fmt(gridStart).slice(0,6) : index===4 ? fmt(gridEnd).slice(0,6) : '') : ['00:00','06:00','12:00','18:00','23:00'][index]; });
+      document.querySelectorAll('[data-row-label]').forEach((node,index)=>{ node.textContent=accuracy ? fmt(gridStart).slice(0,6)+' · '+String(index).padStart(2,'0')+':00' : String(index).padStart(2,'0')+':00'; });
+      const dailyRows=$('daily-preview').querySelectorAll('tbody tr');
+      dailyRows.forEach((row,index)=>{ const d=index===0?start:nextDay(start); row.hidden=d>end; row.cells[0].textContent=fmt(d); row.cells[1].textContent=fmt(nextDay(d)); });
+      $('preview-announcement').textContent='Preview labels updated. No data has been fetched.';
+    }
+    function setView(view) {
+      const accuracy=view==='accuracy'; document.body.dataset.view=view;
+      document.querySelectorAll('[data-view-button]').forEach(button=>{ if(button.dataset.viewButton===view)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current'); });
+      $('page-title').textContent=accuracy?'Forecast accuracy':'Wind outlook';
+      $('page-subtitle').textContent=accuracy?'Review forecast errors using the information available at each buying deadline.':'The forecast available before your day-ahead buying deadline.';
+      $('crumb-view').textContent=accuracy?'Accuracy':'Decision view';
+      $('date-label').textContent=accuracy?'Decision from':'Decision date';
+      $('decision-date').value=accuracy?'2026-01-01':'2026-01-15';
+      $('decision-end').disabled=!accuracy;
+      $('delivery-label').textContent=accuracy?'Delivery period':'Delivery day';
+      $('chart-title').textContent=accuracy?'Selected forecast vs actual':'Next-day wind forecast';
+      $('chart-footnote').textContent=accuracy?'Retrospective comparison · coverage will accompany every metric.':'Latest eligible publication, selected per interval.';
+      $('x-axis-label').textContent=accuracy?'Delivery date · UK':'Delivery time · UK';
+      $('first-column').textContent=accuracy?'Delivery date / time · UK':'Delivery time · UK';
+      $('table-footer-note').textContent=accuracy?'Template interval rows. Daily summaries appear below.':'Three template rows shown. Full interval table follows the selected day.';
+      updateFilters(); setState($('preview-state').value);
+    }
+    function setState(state) {
+      document.body.dataset.state=state;
+      const accuracy=document.body.dataset.view==='accuracy';
+      const messages={empty:[accuracy?'No matched observations':'No eligible forecast',accuracy?'There are no matched forecast and actual values for these filters. Metrics stay unavailable.':'No forecast is available for this date and cutoff. Missing values remain empty.'],error:['Dataset unavailable','The dataset could not be loaded. Check data details before continuing.'],alignment:[accuracy?'Comparison policy not confirmed':'Forecast view remains available',accuracy?'The meaning of the source intervals must be verified before accuracy can be calculated.':'The forecast can be inspected while the comparison policy is being checked. This preview shows the explanatory state.']};
+      if(messages[state]) { $('state-title').textContent=messages[state][0]; $('state-description').textContent=messages[state][1]; }
+      $('quality-message').textContent=state==='alignment'?'Comparison policy pending. Forecast exploration remains available; accuracy calculations wait for source validation.':'Partial-data state preview. Missing intervals stay visible as gaps and are excluded from matched error calculations.';
+      $('gap-row').textContent=state==='partial'?'Missing forecast':'Placeholder'; $('gap-row').classList.toggle('missing',state==='partial');
+      $('error-preview').style.display=accuracy && state==='preview'?'block':'none';
+      $('daily-preview').style.display=accuracy?'block':'none';
+      $('preview-announcement').textContent='Showing '+$('preview-state').selectedOptions[0].textContent.toLowerCase()+'. Illustrative design only.';
+    }
+    document.querySelectorAll('[data-view-button]').forEach(button=>button.addEventListener('click',()=>setView(button.dataset.viewButton)));
+    $('preview-state').addEventListener('change',event=>setState(event.target.value));
+    $('filters').addEventListener('submit',event=>{event.preventDefault();updateFilters();});
+    $('decision-end').addEventListener('input',()=>$('decision-end').setCustomValidity(''));
+    $('decision-date').addEventListener('input',()=>$('decision-end').setCustomValidity(''));
+    document.querySelectorAll('[data-open-details]').forEach(button=>button.addEventListener('click',()=>$('data-dialog').showModal()));
+    setView('decision');
+  </script>
+</body>
+</html>

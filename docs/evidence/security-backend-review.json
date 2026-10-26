@@ -1,0 +1,67 @@
+{
+  "checked_at_utc": "2026-10-26T11:32:47.449209+00:00",
+  "scope": "Current local FastAPI health API only; not production certification or full application security.",
+  "environment": {
+    "python": "3.12.12",
+    "uv": "0.11.8",
+    "platform": "macOS arm64"
+  },
+  "checks": [
+    {
+      "command": "backend/.venv/bin/python -m pytest backend/tests -q",
+      "exit_code": 0,
+      "result": "49 passed in 0.61s",
+      "groups": {
+        "existing_health": 7,
+        "white_box": 21,
+        "black_box": 21
+      }
+    },
+    {
+      "command": "backend/.venv/bin/ruff check backend",
+      "exit_code": 0,
+      "result": "All checks passed"
+    },
+    {
+      "command": "backend/.venv/bin/ruff format --check backend",
+      "exit_code": 0,
+      "result": "5 files already formatted"
+    },
+    {
+      "command": "backend/.venv/bin/ruff check --select S backend/src",
+      "exit_code": 0,
+      "result": "All checks passed"
+    },
+    {
+      "command": "uv lock --project backend --check",
+      "exit_code": 0,
+      "result": "Resolved 26 packages"
+    },
+    {
+      "command": "uv audit --project backend --locked --python-version 3.12 --python-platform aarch64-apple-darwin",
+      "exit_code": 0,
+      "result": "Found no known vulnerabilities and no adverse project statuses in 25 packages",
+      "ignored_advisories": [],
+      "warning": "uv audit is experimental"
+    }
+  ],
+  "red_green": {
+    "before_hardening": "12 failed, 9 passed in source-aware security suite",
+    "after_hardening": "49 passed in full backend suite including real-server probes"
+  },
+  "files_sha256": {
+    "backend/src/gridbricks/main.py": "acef5dfc06e62e91bbb4bc7e02894daed5a803716a245b02df1a63196f9f7961",
+    "backend/tests/integration/test_health.py": "23c86defa95f462b59f6e02a3622ee038bc03b652855de3f34f8662c056e8330",
+    "backend/tests/integration/test_security.py": "398c98fef88fee0368bb60bbe57ea4263999d53395c4630a36e4749003ba516c",
+    "backend/tests/integration/test_security_blackbox.py": "d2961ac15645ef33c6a676d99b551630c344b120c807095fba43d69e1e04f56b",
+    "backend/pyproject.toml": "f5cc606ebfcd18378f0449ba8ca59c41b95000546a92a056d89e94b1e5b4798e",
+    "backend/uv.lock": "eaf55e1c775817b6db4cf82170d7959a7345538b8928a051ac1ea25dd81a7083"
+  },
+  "limits": [
+    "Only the implemented health route and current framework surface are tested.",
+    "No public hosting/TLS/auth/database/import/analytics/export feature exists to test.",
+    "Not exhaustive fuzzing, volumetric DoS testing, package-source audit, or independent penetration certification.",
+    "Dependency lookup is platform/Python/advisory-service dependent and excludes the isolated build environment.",
+    "No Git history exists for historical secret scanning."
+  ]
+}

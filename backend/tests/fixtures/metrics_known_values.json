@@ -1,0 +1,7 @@
+{
+  "source_mode": "synthetic",
+  "description": "Deterministic equation fixture; not Elexon observations.",
+  "forecast_mw": [100, 200],
+  "actual_reference_mw": [80, 220],
+  "expected": {"mae_mw": 20.0, "rmse_mw": 20.0, "bias_mw": 0.0}
+}

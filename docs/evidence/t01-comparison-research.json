@@ -1,0 +1,227 @@
+{
+  "recorded_at": "2026-10-26T14:19:26.686553+00:00",
+  "status": "research_recommendation_not_policy_adoption",
+  "question": "Q03 physical interval meaning and retrospective comparison",
+  "conclusion": "No inspected primary source establishes an hourly WINDFOR average over [t,t+1h). Use an explicitly labelled timestamp-matched half-hour reference benchmark only after governing-document revision.",
+  "recommended_policy": "timestamp_matched_halfhour_reference_v1",
+  "sources": [
+    {
+      "id": "current_portal",
+      "url": "https://developer.data.elexon.co.uk/",
+      "retrieved_at": "2026-10-26T14:19:24.955333+00:00",
+      "interpretation": "The portal describes the derived latest wind forecast in relation to a time point, without defining an averaging period.",
+      "short_quote": "specific point in time",
+      "http_status": 200,
+      "status": "succeeded",
+      "sha256": "f11a24babebd0275812bad4897a6db651b6cbe1e2bc34da29809bd351dfd7192",
+      "bytes": 15701
+    },
+    {
+      "id": "current_schema",
+      "url": "https://data.elexon.co.uk/swagger/v1/swagger.json",
+      "retrieved_at": "2026-10-26T14:19:24.955540+00:00",
+      "interpretation": "WINDFOR stream exposes target, publication and MW but no physical interval duration. FUELHH is a half-hour average and supports either settlement-date or publication-time bounds.",
+      "short_quote": "average MW values over 30 minutes",
+      "http_status": 200,
+      "status": "succeeded",
+      "sha256": "7710bb452e47e448dad8b978a0313d9bf127a6faa0c2b623891ff281f807101a",
+      "bytes": 1480105
+    },
+    {
+      "id": "current_ui_bundle",
+      "url": "https://bmrs.elexon.co.uk/static/js/main.8ee28d09.js",
+      "retrieved_at": "2026-10-26T14:19:24.955605+00:00",
+      "interpretation": "The official wind-generation screen explains its comparison of wind forecasts with Generation by Fuel Type outturn. This supports a reference comparison, not a proof of temporal equivalence.",
+      "short_quote": "direct comparison between wind generation forecasts and out-turn",
+      "http_status": 200,
+      "status": "succeeded",
+      "sha256": "91a79dea10b6581706491c81a9bf68817d0be859340916e6aff8e7a536cf47cd",
+      "bytes": 3502236
+    },
+    {
+      "id": "historical_idd_2015",
+      "url": "https://assets.elexon.co.uk/wp-content/uploads/sites/11/2015/04/28162953/NETA_IDD_Part_1_v33.0_redlined_P305_P309_CB.pdf",
+      "retrieved_at": "2026-10-26T14:19:24.955656+00:00",
+      "interpretation": "The historical WINDFOR message title uses peak terminology and describes selected half-hours; it cannot establish the current hourly averaging convention.",
+      "short_quote": "WINDFOR – Forecast Peak Wind Generation",
+      "http_status": 200,
+      "status": "succeeded",
+      "sha256": "6724bb98b04d3ce138f97e9e3d8a04f68bb7c0d8f4051e53b5ad905aa70178cc",
+      "bytes": 2625374
+    },
+    {
+      "id": "historical_p220_2008",
+      "url": "https://assets.elexon.co.uk/wp-content/uploads/sites/11/2012/02/28170956/p220ac10.pdf",
+      "retrieved_at": "2026-10-26T14:19:25.215840+00:00",
+      "interpretation": "The P220 consultation discusses a forecast/outturn history with average MW in the settlement period of a sampled daily peak and outturn from half-hourly fuel data. Historical context only; not a definition of the 2026 stream.",
+      "short_quote": "",
+      "http_status": 200,
+      "status": "succeeded",
+      "sha256": "b63b01c5a4841a79fcd01de2f2717ff764bca94558ef2064392862efcd67864f",
+      "bytes": 606983
+    },
+    {
+      "id": "historical_cp1381_2012",
+      "url": "https://assets.elexon.co.uk/wp-content/uploads/sites/11/2012/10/28165754/CP1381.pdf",
+      "retrieved_at": "2026-10-26T14:19:25.855006+00:00",
+      "interpretation": "CP1381 describes hourly WINDFOR values and allows negative net wind forecasts, but does not define them as hourly averages.",
+      "short_quote": "",
+      "http_status": 200,
+      "status": "succeeded",
+      "sha256": "ffc86a19d48910ffa086040732712a10c0379014b604ad4dcc45fc27a59ee69b",
+      "bytes": 199734
+    },
+    {
+      "id": "neso_day_ahead",
+      "url": "https://www.neso.energy/data-portal/day-ahead-wind-forecast/day_ahead_wind_forecast",
+      "retrieved_at": "2026-10-26T14:19:26.252957+00:00",
+      "interpretation": "NESO has a separate operational-metered day-ahead series with settlement-period fields. It is contextual evidence only and is not substituted for WINDFOR.",
+      "short_quote": "",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "actual_revision_checks": {
+    "retrieved_at": "2026-10-26T14:18:01.725309+00:00",
+    "checks": {
+      "jan16_settlement": {
+        "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-01-16&settlementDateTo=2026-01-16&fuelType=WIND",
+        "retrieved_at": "2026-10-26T14:18:00.509829+00:00",
+        "http_status": 200,
+        "status": "succeeded",
+        "sha256": "ee982bb08bf66a8559da94a573ecf3e8e368ab02d8397d2912afea6a5cac7e64",
+        "row_count": 48,
+        "examples": [
+          {
+            "dataset": "FUELHH",
+            "publishTime": "2026-01-17T00:00:00Z",
+            "startTime": "2026-01-16T23:30:00Z",
+            "settlementDate": "2026-01-16",
+            "settlementPeriod": 48,
+            "fuelType": "WIND",
+            "generation": 9116
+          },
+          {
+            "dataset": "FUELHH",
+            "publishTime": "2026-01-16T00:30:00Z",
+            "startTime": "2026-01-16T00:00:00Z",
+            "settlementDate": "2026-01-16",
+            "settlementPeriod": 1,
+            "fuelType": "WIND",
+            "generation": 7477
+          }
+        ]
+      },
+      "jan16_publication": {
+        "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?publishDateTimeFrom=2026-01-16T00%3A00%3A00Z&publishDateTimeTo=2026-01-18T00%3A00%3A00Z&fuelType=WIND",
+        "retrieved_at": "2026-10-26T14:18:00.510032+00:00",
+        "http_status": 200,
+        "status": "succeeded",
+        "sha256": "2932b9dbe1b143f7dfb3c387d5a52d3dfdec7e3c5f217db15d12d8c7de806e64",
+        "row_count": 97,
+        "examples": [
+          {
+            "dataset": "FUELHH",
+            "publishTime": "2026-01-18T00:00:00Z",
+            "startTime": "2026-01-17T23:30:00Z",
+            "settlementDate": "2026-01-17",
+            "settlementPeriod": 48,
+            "fuelType": "WIND",
+            "generation": 3426
+          },
+          {
+            "dataset": "FUELHH",
+            "publishTime": "2026-01-16T00:00:00Z",
+            "startTime": "2026-01-15T23:30:00Z",
+            "settlementDate": "2026-01-15",
+            "settlementPeriod": 48,
+            "fuelType": "WIND",
+            "generation": 7407
+          }
+        ]
+      },
+      "feb1_settlement": {
+        "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?settlementDateFrom=2026-02-01&settlementDateTo=2026-02-01&fuelType=WIND",
+        "retrieved_at": "2026-10-26T14:18:00.510089+00:00",
+        "http_status": 200,
+        "status": "succeeded",
+        "sha256": "15e5f5dcb2e3233e40a5dd964f1c99672f8a0a7a640d73fce8652124869984be",
+        "row_count": 48,
+        "examples": [
+          {
+            "dataset": "FUELHH",
+            "publishTime": "2026-02-02T00:00:00Z",
+            "startTime": "2026-02-01T23:30:00Z",
+            "settlementDate": "2026-02-01",
+            "settlementPeriod": 48,
+            "fuelType": "WIND",
+            "generation": 5302
+          },
+          {
+            "dataset": "FUELHH",
+            "publishTime": "2026-02-01T00:30:00Z",
+            "startTime": "2026-02-01T00:00:00Z",
+            "settlementDate": "2026-02-01",
+            "settlementPeriod": 1,
+            "fuelType": "WIND",
+            "generation": 8724
+          }
+        ]
+      },
+      "feb1_publication": {
+        "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream?publishDateTimeFrom=2026-02-01T00%3A00%3A00Z&publishDateTimeTo=2026-02-03T00%3A00%3A00Z&fuelType=WIND",
+        "retrieved_at": "2026-10-26T14:18:00.510132+00:00",
+        "http_status": 200,
+        "status": "succeeded",
+        "sha256": "81740261b9b7262bf27fec2d79b2a356444520fd315d381c9685b9a995d6e0e7",
+        "row_count": 97,
+        "examples": [
+          {
+            "dataset": "FUELHH",
+            "publishTime": "2026-02-03T00:00:00Z",
+            "startTime": "2026-02-02T23:30:00Z",
+            "settlementDate": "2026-02-02",
+            "settlementPeriod": 48,
+            "fuelType": "WIND",
+            "generation": 15213
+          },
+          {
+            "dataset": "FUELHH",
+            "publishTime": "2026-02-01T00:00:00Z",
+            "startTime": "2026-01-31T23:30:00Z",
+            "settlementDate": "2026-01-31",
+            "settlementPeriod": 48,
+            "fuelType": "WIND",
+            "generation": 8849
+          }
+        ]
+      }
+    },
+    "comparisons": [
+      {
+        "delivery_date": "2026-01-16",
+        "settlement_target_rows": 48,
+        "publication_target_rows": 48,
+        "semantic_rows_only_in_settlement": 0,
+        "semantic_rows_only_in_publication": 0,
+        "targets_with_multiple_versions": 0,
+        "limitation": "Two-day publication samples cannot establish all later revisions are returned or absent."
+      },
+      {
+        "delivery_date": "2026-02-01",
+        "settlement_target_rows": 48,
+        "publication_target_rows": 48,
+        "semantic_rows_only_in_settlement": 0,
+        "semantic_rows_only_in_publication": 0,
+        "targets_with_multiple_versions": 0,
+        "limitation": "Two-day publication samples cannot establish all later revisions are returned or absent."
+      }
+    ]
+  },
+  "limits": [
+    "No physical equivalence between a point/unspecified forecast and a half-hour average is claimed.",
+    "Historical peak terminology must not be presented as a current hourly-peak definition.",
+    "No NESO or alternative analytical data feed is added.",
+    "No complete history or finality of FUELHH revisions is established by the sampled queries."
+  ]
+}
