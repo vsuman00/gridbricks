@@ -39,6 +39,9 @@ class Settings:
         )
     )
     public_hosts: tuple[str, ...] = field(default_factory=_public_hosts)
+    immutable_deployment: bool = field(
+        default_factory=lambda: os.environ.get("GRIDBRICKS_IMMUTABLE_DEPLOYMENT") == "1"
+    )
 
     def __post_init__(self):
         object.__setattr__(self, "data_dir", Path(self.data_dir).expanduser().resolve())

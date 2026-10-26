@@ -25,7 +25,7 @@ export default function App() {
     if (!snapshotId && snapshot) pinSnapshot(snapshot)
   }, [snapshotId, snapshot, pinSnapshot])
   const path =
-    !workspace.warning && snapshotId && snapshot?.snapshot_id === snapshotId
+    !workspace.warning && snapshotId
       ? `${view === 'decision' ? 'forecast' : 'accuracy'}?${analysisQuery(view, filters, snapshotId)}`
       : null
   const analysis = useData<Analysis>(path)

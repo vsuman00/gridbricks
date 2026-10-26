@@ -1,5 +1,6 @@
 """Read-only analytical API; source imports run through the separate CLI."""
 
+import re
 from collections.abc import Awaitable, Callable
 from time import perf_counter
 from typing import Literal
@@ -43,6 +44,15 @@ UI_CONTENT_SECURITY_POLICY = (
     "font-src 'self'; connect-src 'self'; frame-ancestors 'none'; form-action 'self'; "
     "base-uri 'none'; object-src 'none'"
 )
+STATIC_ASSET_CACHE = "public, max-age=31536000, s-maxage=31536000, immutable"
+IMMUTABLE_RESPONSE_CACHE = "public, max-age=0, s-maxage=3600"
+CACHEABLE_API_PATHS = {
+    "/api/v1/data-status",
+    "/api/v1/forecast",
+    "/api/v1/accuracy",
+    "/api/v1/export",
+}
+HASHED_ASSET_PATH = re.compile(r"/assets/[^/]+-[A-Za-z0-9_-]{8,}\.[A-Za-z0-9]+")
 
 
 class HealthResponse(BaseModel):
@@ -125,6 +135,15 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 )
         path = request.url.path
         response.headers.update(SECURITY_HEADERS)
+        if request.method in {"GET", "HEAD"} and response.status_code == 200:
+            if runtime_settings.static_dir is not None:
+                if HASHED_ASSET_PATH.fullmatch(path):
+                    response.headers["Cache-Control"] = STATIC_ASSET_CACHE
+                elif path in {"/", "/index.html"}:
+                    response.headers["Cache-Control"] = IMMUTABLE_RESPONSE_CACHE
+            if runtime_settings.immutable_deployment and path in CACHEABLE_API_PATHS:
+                if path == "/api/v1/data-status" or "snapshot_id" in request.query_params:
+                    response.headers["Cache-Control"] = IMMUTABLE_RESPONSE_CACHE
         if (
             runtime_settings.static_dir is not None
             and path != "/health"

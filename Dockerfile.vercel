@@ -11,7 +11,8 @@ FROM python:3.12.12-slim AS app
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     GRIDBRICKS_DATA_DIR=/app/data \
-    GRIDBRICKS_STATIC_DIR=/app/frontend
+    GRIDBRICKS_STATIC_DIR=/app/frontend \
+    GRIDBRICKS_IMMUTABLE_DEPLOYMENT=1
 
 WORKDIR /app
 COPY backend/pyproject.toml backend/uv.lock backend/.python-version /app/backend/

@@ -155,20 +155,19 @@ export function exportUrl(view: View, filters: Filters, snapshotId: string) {
   query.set('view', view === 'decision' ? 'forecast' : 'accuracy')
   return `/api/v1/export?${query}`
 }
+const mwFormatter = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 })
+const signedMwFormatter = new Intl.NumberFormat('en-GB', {
+  maximumFractionDigits: 2,
+  signDisplay: 'exceptZero',
+})
+const timestampFormatter = new Intl.DateTimeFormat('en-GB', {
+  dateStyle: 'medium',
+  timeStyle: 'short',
+  timeZone: 'Europe/London',
+})
 export function mw(value: number | null | undefined, signed = false) {
-  return value == null
-    ? '—'
-    : new Intl.NumberFormat('en-GB', {
-        maximumFractionDigits: 2,
-        signDisplay: signed ? 'exceptZero' : 'auto',
-      }).format(value)
+  return value == null ? '—' : (signed ? signedMwFormatter : mwFormatter).format(value)
 }
 export function timestamp(value: string | null | undefined) {
-  return value
-    ? new Intl.DateTimeFormat('en-GB', {
-        dateStyle: 'medium',
-        timeStyle: 'short',
-        timeZone: 'Europe/London',
-      }).format(new Date(value))
-    : 'Unavailable'
+  return value ? timestampFormatter.format(new Date(value)) : 'Unavailable'
 }

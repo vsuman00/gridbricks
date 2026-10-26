@@ -1,12 +1,35 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
-import { dataStatus } from './test/apiFixtures'
+import { accuracyAnalysis, dataStatus } from './test/apiFixtures'
 
 beforeEach(() => window.history.replaceState(null, '', '/'))
 afterEach(() => vi.unstubAllGlobals())
 
 describe('stored workspace malformed boundary handling', () => {
+  it('starts a pinned accuracy request while snapshot status is still pending', async () => {
+    window.history.replaceState(
+      null,
+      '',
+      '/?view=accuracy&decision_from=2026-01-15&decision_to=2026-01-15&cutoff=09%3A30&snapshot_id=saved-snapshot',
+    )
+    let resolveStatus!: (value: unknown) => void
+    const pendingStatus = new Promise((resolve) => {
+      resolveStatus = resolve
+    })
+    const fetch = vi.fn((url: string) =>
+      url.includes('data-status')
+        ? pendingStatus
+        : Promise.resolve({ ok: true, status: 200, json: async () => accuracyAnalysis() }),
+    )
+    vi.stubGlobal('fetch', fetch)
+    render(<App />)
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2))
+    expect(fetch.mock.calls.some(([url]) => url.includes('/api/v1/accuracy?'))).toBe(true)
+    resolveStatus({ ok: true, status: 200, json: async () => dataStatus() })
+    expect(await screen.findByText('Forecast error')).toBeInTheDocument()
+  })
+
   it('rejects an empty successful snapshot without a pin loop or enabling export', async () => {
     const fetch = vi
       .fn()
